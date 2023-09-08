@@ -1,0 +1,2319 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="AWS.htm"><LINK rel=File-List 
+href="AWS.files/filelist.xml"></HEAD>
+<BODY lang=ja style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.618in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.606in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>作成</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月22日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">8:52</P></DIV>
+<DIV 
+style="WIDTH: 5.618in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">注意点</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">料金直結している</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">課題に指定があればそれ、基本は</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>t3.micro</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht571F(1).tmp" width=530 
+height=186></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>編集から</SPAN><SPAN lang=en-US>VPC</SPAN><SPAN 
+lang=ja>を確認しておく（忘れがち）</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5741(1).tmp" width=527 
+height=192></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">高度な詳細</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">スタンダードを選択する　→　料金に直結している</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5754(1).tmp" width=535 
+height=106></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.105in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.828in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>インスタンス接続方法</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:04</P></DIV>
+<DIV 
+style="WIDTH: 10.105in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN lang=en-US>EC2 
+Instance Connect </SPAN><SPAN lang=ja>エンドポイントを使用する</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">イメージ</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5776(1).tmp" width=311 
+height=156></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">↓</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>VPC</SPAN><SPAN lang=ja>からエンドポイントを作成する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5789(1).tmp" width=878 
+height=256></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht579B(1).tmp" width=892 
+height=428></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">セッションマネージャから接続する</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">★インターネットへの通信ができる環境でないといけない</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht57BE(1).tmp" width=966 
+height=264></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>必要な</SPAN><SPAN lang=en-US>IAM</SPAN><SPAN lang=ja>ポリシー</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht57D0(1).tmp" width=350 
+height=33></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.056in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.717in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>バックアップ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">10:37</P></DIV>
+<DIV 
+style="WIDTH: 10.056in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>のデータは</SPAN><SPAN lang=en-US>EBS</SPAN><SPAN 
+lang=ja>に保存されている　→　</SPAN><SPAN lang=en-US>EBS</SPAN><SPAN 
+lang=ja>のスナップショットを作成すればバックアップが取れる</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht57E3(1).tmp" width=484 
+height=198></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5805(1).tmp" width=538 
+height=472></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>復元方法は大きく</SPAN><SPAN lang=en-US>2</SPAN><SPAN lang=ja>パターン</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>①スナップショットからイメージを作成して、それを基のに</SPAN><SPAN lang=en-US>EC2</SPAN><SPAN 
+lang=ja>を立ち上げる</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>②スナップショットからボリュームを作成して、それを</SPAN><SPAN lang=en-US>EC2</SPAN><SPAN 
+lang=ja>のインスタンスにマウントする</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>①スナップショットからイメージを作成して、それを基のに</SPAN><SPAN lang=en-US>EC2</SPAN><SPAN 
+lang=ja>を立ち上げる</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5827(1).tmp" width=215 
+height=231></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>②スナップショットからボリュームを作成して、それを</SPAN><SPAN lang=en-US>EC2</SPAN><SPAN 
+lang=ja>のインスタンスにマウントする</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht584A(1).tmp" width=536 
+height=486></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht585C(1).tmp" width=961 
+height=232></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht587F(1).tmp" width=541 
+height=405></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">マウントのコマンド</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">sudo mount -o nouuid 
+/dev/sdf1 /mnt</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.592in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.181in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EBS</SPAN><SPAN lang=ja>の暗号化</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月7日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:01</P></DIV>
+<DIV 
+style="WIDTH: 7.592in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EBS</SPAN><SPAN lang=ja>が立ち上がった状態では暗号化することができない</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">そのため一度スナップショットを作成し、そのスナップショットをコピー。</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">コピーする際に暗号化ができるので、それを復元することで、</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>EBS</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>が暗号化された状態の</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>EC2</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>インスタンスが立ち上がる</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9.819in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.102in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">RDS</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月22日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">9:30</P></DIV>
+<DIV 
+style="WIDTH: 9.819in; MARGIN-TOP: 0.245in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>データベースの作成</SPAN><SPAN lang=en-US>MySQL</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>データベースの作成を選択</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・データベースの作成方法を選択　→　標準作成</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・エンジンのオプション　→　</SPAN><SPAN lang=en-US>MySQL</SPAN><SPAN 
+lang=ja>（使用するエンジンタイプを選択）</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・テンプレート　→　開発</SPAN><SPAN lang=en-US>/</SPAN><SPAN lang=ja>テスト</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・可用性と耐久性　→　マルチ</SPAN><SPAN lang=en-US>AZ DB</SPAN><SPAN 
+lang=ja>インスタンスを選択（課題で要求されているものを選択すること）</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・設定　→　</SPAN><SPAN lang=en-US>DB</SPAN><SPAN 
+lang=ja>クラスター識別子　</SPAN><SPAN lang=en-US>DB</SPAN><SPAN lang=ja>の名前</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>　→　認証情報の設定　（課題で要求されているもの）</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・インスタンスの設定　→　</SPAN><SPAN lang=en-US>DB</SPAN><SPAN 
+lang=ja>インスタンスクラス（課題で要求されているもの）</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・ストレージ　→　ストレージタイプ　汎用</SPAN><SPAN lang=en-US>SSD(gp3)</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.75in'><SPAN 
+lang=ja>　　→　ストレージ割り当て　</SPAN><SPAN lang=en-US>20(</SPAN><SPAN 
+lang=ja>課題で要求されているもの）</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.75in'>　　→　自動スケーリング　有効</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・接続　→　コンピューティングリソース　接続しない</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=ja>　→　</SPAN><SPAN lang=en-US>VPC</SPAN><SPAN lang=ja>　自分の</SPAN><SPAN 
+lang=en-US>VPC</SPAN><SPAN lang=ja>　</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=ja>　→　サブネットグループ　</SPAN><SPAN lang=en-US>default</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=ja>　→　セキュリティグループ　</SPAN><SPAN lang=en-US>RDS</SPAN><SPAN 
+lang=ja>用のものを作成　（インバウンド：</SPAN><SPAN lang=en-US>TCP/3306</SPAN><SPAN 
+lang=ja>・ソース</SPAN><SPAN lang=en-US>ec2</SPAN><SPAN 
+lang=ja>の所属するセキュリティグループ　</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 4.125in'>　アウトバウンド：すべて）</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・追加設定　→　最初のデータベース名　入力しておくと楽</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.75in'>　→　自動バックアップ　有効</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.75in'>&nbsp;</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.75in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.014in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.768in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>RDS</SPAN><SPAN lang=ja>バックアップ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">13:37</P></DIV>
+<DIV 
+style="WIDTH: 11.014in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">スナップショットから復元可能</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>作成した</SPAN><SPAN lang=en-US>RDS</SPAN><SPAN 
+lang=ja>のスナップショットを作成</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5891(1).tmp" width=250 
+height=372></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>※全く新しい</SPAN><SPAN lang=en-US>RDS</SPAN><SPAN 
+lang=ja>インスタンスが作成されるので、</SPAN><SPAN lang=en-US>DNS</SPAN><SPAN 
+lang=ja>で名前解決や、エンドポイント、セキュリティなどの変更も必要になる</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht58B3(1).tmp" width=1053 
+height=325></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 8.831in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.756in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ロードバランサ―</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月22日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">10:42</P></DIV>
+<DIV 
+style="WIDTH: 8.831in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ターゲットグループ</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">・基本的な設定　→　インスタンス</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 1.125in">　→　名前　任意</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in 0in 0in 1.125in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">　→　プロトコル・ポート　ヘルスチェックするプロトコルとポート　今回は</SPAN><SPAN 
+lang=en-US style='FONT-FAMILY: "Yu Gothic"'>HTTP</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>の</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>5000</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>番</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.125in'><SPAN 
+lang=ja>　→　</SPAN><SPAN lang=en-US>VPC</SPAN><SPAN lang=ja>　自分の</SPAN><SPAN 
+lang=en-US>VPC</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ロードバランサ―の作成</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・ロードバランサ―タイプ　→　</SPAN><SPAN lang=en-US>ALB</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・基本的な設定　→　名前　任意</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.125in'>　→　スキーム　インターネット向け</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.125in'><SPAN 
+lang=ja>　→　アドレスタイプ　</SPAN><SPAN lang=en-US>IPv4</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・ネットワークマッピング　→　</SPAN><SPAN lang=en-US>VPC</SPAN><SPAN 
+lang=ja>　自分の</SPAN><SPAN lang=en-US>VPC</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.875in'><SPAN 
+lang=ja>　→　マッピング　</SPAN><SPAN lang=en-US>AZ</SPAN><SPAN 
+lang=ja>を二つ以上選択</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・セキュリティグループ　→　</SPAN><SPAN lang=en-US>ALB</SPAN><SPAN 
+lang=ja>用に作成　（インバウンド：ポート</SPAN><SPAN lang=en-US>/</SPAN><SPAN 
+lang=ja>リスナー　ソース</SPAN><SPAN lang=en-US>/</SPAN><SPAN 
+lang=ja>すべて　アウトバウンド：すべて）</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・リスナー　→　外から接続されるポート</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ターゲットグループをロードバランサ―に関連付けする</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.011in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 0.863in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">S3</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月22日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">10:53</P></DIV>
+<DIV 
+style="WIDTH: 7.011in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">バケットの作成</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">・一般的な設定　→　バケット名　任意</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in 0in 0in 1.125in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">　→　リージョン　</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>ap-northeast-1</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>（東京）</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・オブジェクト所有者　→　</SPAN><SPAN lang=en-US>ACL</SPAN><SPAN 
+lang=ja>無効</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・ブロックパブリックアクセス設定　→　パブリックアクセスをすべてブロック</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・バケットのバージョニング　→　無効</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・デフォルトの暗号化　→　</SPAN><SPAN lang=en-US>SSE-S3</SPAN><SPAN 
+lang=ja>（デフォルト）</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.5in'>　→　バケットキー　有効</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・詳細設定　→　オブジェクトロック　無効</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>に割り当てている</SPAN><SPAN 
+lang=en-US>IAM</SPAN><SPAN lang=ja>ロールのポリシーを</SPAN><SPAN 
+lang=en-US>S3</SPAN><SPAN lang=ja>を使えるように変更する</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>・許可の追加　→　インラインポリシーの作成</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.5in'><SPAN 
+lang=ja>サービスを</SPAN><SPAN lang=en-US>S3</SPAN><SPAN 
+lang=ja>選択　→　読み取りから</SPAN><SPAN lang=en-US>GetObject</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 2.625in'><SPAN 
+lang=en-US><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN lang=ja>→　書き込みから</SPAN><SPAN lang=en-US>PutObject</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.125in'><SPAN 
+lang=ja>　　リソースでバケットの</SPAN><SPAN lang=en-US>ARN</SPAN><SPAN 
+lang=ja>を追加　→　</SPAN><SPAN lang=en-US>bucket name</SPAN><SPAN 
+lang=ja>は作成したバケット</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 3.75in'><SPAN 
+lang=ja>　→　</SPAN><SPAN lang=en-US>object name</SPAN><SPAN 
+lang=ja>は任意</SPAN></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.896in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 4.423in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">オブジェクトの暗号化設定変更</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:58</P></DIV>
+<DIV 
+style="WIDTH: 7.896in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>S3</SPAN><SPAN lang=ja>側</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht58D6(1).tmp" width=636 
+height=507></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht58F8(1).tmp" width=632 
+height=190></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>KMS</SPAN><SPAN lang=ja>側</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><A 
+href="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html</A></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>キーポリシーに追加する</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht591A(1).tmp" width=753 
+height=456></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.709in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.801in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Key 
+Management Service</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">14:51</P></DIV>
+<DIV 
+style="WIDTH: 7.709in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>KMS</SPAN><SPAN lang=ja>で鍵作成</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht593C(1).tmp" width=723 
+height=429></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht595F(1).tmp" width=729 
+height=500></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5971(1).tmp" width=732 
+height=432></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5994(1).tmp" width=735 
+height=132></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht59A6(1).tmp" width=728 
+height=446></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht59C8(1).tmp" width=728 
+height=197></P>
+<P lang=en-US 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>S3</SPAN><SPAN lang=ja>バケットを</SPAN><SPAN lang=en-US>KMS</SPAN><SPAN 
+lang=ja>のカギを使用して暗号化する場合は</SPAN><SPAN lang=en-US>KMS</SPAN><SPAN 
+lang=ja>キーポリシーに以下の変更を加える</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><A 
+href="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html</A></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>{</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Sid"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"AllowCloudFrontServicePrincipalSSE-KMS"</SPAN><SPAN 
+style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Effect"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Allow"</SPAN><SPAN style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Principal"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;{</SPAN></P>
+<P style="FONT-SIZE: 10.5pt; MARGIN: 0in"><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #242424'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>"AWS"</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #242424'>:&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>"arn:aws:iam::&lt;AWS&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "MS Mincho"; COLOR: #2a00ff'>アカウント</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>&nbsp;ID&gt;:root"</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #242424'>,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Service"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"cloudfront.amazonaws.com"</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;},</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Action"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;[</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"kms:Decrypt"</SPAN><SPAN 
+style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"kms:Encrypt"</SPAN><SPAN 
+style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"kms:GenerateDataKey*"</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;],</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Resource"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"*"</SPAN><SPAN style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Condition"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;{</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"StringEquals"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;{</SPAN></P>
+<P style="FONT-SIZE: 10.5pt; MARGIN: 0in"><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #242424'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>"AWS:SourceArn"</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #242424'>:&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>"arn:aws:cloudfront::&lt;AWS&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "MS Mincho"; COLOR: #2a00ff'>アカウント</SPAN><SPAN 
+style='FONT-FAMILY: "Cascadia Mono"; COLOR: #2a00ff'>&nbsp;ID&gt;:distribution/&lt;CloudFront&nbsp;distribution&nbsp;ID&gt;"</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
+<P style="FONT-SIZE: 10.5pt; COLOR: #242424; MARGIN: 0in"><SPAN lang=ja 
+style='FONT-FAMILY: "Cascadia Mono"'>}</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>,</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 4.347in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.05in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>EFS</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月22日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">11:05</P></DIV>
+<DIV 
+style="WIDTH: 4.347in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">リポジトリ作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht59DB(1).tmp" width=402 
+height=518></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">プッシュコマンド実施</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US>ec2-user</SPAN><SPAN lang=ja>を</SPAN><SPAN 
+lang=en-US>docker</SPAN><SPAN lang=ja>グループに追加する</SPAN></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>usermod 
+-a -G docker ec2-user</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US style="FONT-WEIGHT: bold">ec2</SPAN><SPAN lang=ja 
+style="FONT-WEIGHT: bold">インスタンスに再接続する</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>上から順に実行する</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht59FD(1).tmp" width=413 
+height=386></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.57in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.161in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EFS</SPAN><SPAN lang=ja>の暗号化</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月7日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:05</P></DIV>
+<DIV 
+style="WIDTH: 7.57in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>EFS</SPAN><SPAN lang=ja>の暗号化は途中からはできない。</SPAN><SPAN lang=en-US>AWS 
+Backup</SPAN><SPAN lang=ja>から一度バックアップを作成し、復元する際に新しい</SPAN><SPAN 
+lang=en-US>EFS</SPAN><SPAN 
+lang=ja>を作成し、その際に暗号化を有効化する。</SPAN></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.042in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.07in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ECS</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月24日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">9:55</P></DIV>
+<DIV 
+style="WIDTH: 5.042in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">①タスク定義を作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5A10(1).tmp" width=480 
+height=485></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5A32(1).tmp" width=480 
+height=526></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5A54(1).tmp" width=480 
+height=518></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5A67(1).tmp" width=480 
+height=290></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">②クラスター作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5A89(1).tmp" width=480 
+height=583></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5AAC(1).tmp" width=480 
+height=232></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">③サービス作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5ABE(1).tmp" width=480 
+height=366></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5AE0(1).tmp" width=480 
+height=506></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B03(1).tmp" width=480 
+height=516></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B25(1).tmp" width=480 
+height=573></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B38(1).tmp" width=480 
+height=508></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.042in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.082in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ECR</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月24日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">9:13</P></DIV>
+<DIV 
+style="WIDTH: 5.042in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>ECR</SPAN><SPAN lang=ja>リポジトリ作成</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B5A(1).tmp" width=480 
+height=439></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B7C(1).tmp" width=480 
+height=367></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">リポジトリに</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>docker image</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>を</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>push</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>する</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>プッシュコマンドの表示</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5B8F(1).tmp" width=480 
+height=163></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>1~4</SPAN><SPAN lang=ja>を実行する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5BB1(1).tmp" width=480 
+height=426></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 6.938in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.05in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ElastiCache</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月24日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:47</P></DIV>
+<DIV 
+style="WIDTH: 6.938in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>redis</SPAN><SPAN lang=ja>　→　キャッシュを管理</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5BD3(1).tmp" width=480 
+height=374></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C05(1).tmp" width=480 
+height=509></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C27(1).tmp" width=480 
+height=353></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C3A(1).tmp" width=480 
+height=501></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C5C(1).tmp" width=480 
+height=514></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>セキュリティグループはインバウンド</SPAN><SPAN lang=en-US>TCP</SPAN><SPAN 
+lang=ja>：</SPAN><SPAN lang=en-US>6379</SPAN><SPAN lang=ja>に対してソースは</SPAN><SPAN 
+lang=en-US>Redis</SPAN><SPAN lang=ja>に接続してくるやつ</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C7E(1).tmp" width=480 
+height=337></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 4.934in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.571in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Lambda</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">13:21</P></DIV>
+<DIV 
+style="WIDTH: 4.934in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>DynamoDB</SPAN><SPAN lang=ja>への</SPAN><SPAN 
+lang=en-US>Get,Post</SPAN><SPAN lang=ja>の処理</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">例）</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">import json</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">import os</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">import boto3</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">REGION = 
+os.environ['REGION']</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">TABLE = 
+os.environ['TABLE']</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">dynamo = 
+boto3.resource('dynamodb', region_name=REGION)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">table = 
+dynamo.Table(TABLE)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">def 
+lambda_handler(event, context):</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>if event['httpMethod'] == 
+'GET':</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>data 
+= table.scan()['Items']</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>elif event['httpMethod'] == 
+'POST':</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>postData = json.loads(event['body'])</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>table.put_item(Item = postData)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>data 
+= {'message': 'successfull'}</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>return {</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>'statusCode': 200,</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>'body': json.dumps(data)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>}</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.576in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.127in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Lambda</SPAN><SPAN lang=ja>補足</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">8:58</P></DIV>
+<DIV 
+style="WIDTH: 5.576in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">インポートに必要なモジュールがないというエラーが出たら</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5C91(1).tmp" width=331 
+height=336></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">を実行して</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>pandas</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>を</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>pip install</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>で足りないモジュールをインストールする</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>python</SPAN><SPAN lang=ja>ディレクトリごと</SPAN><SPAN 
+lang=en-US>zip</SPAN><SPAN lang=ja>で圧縮して</SPAN><SPAN 
+lang=en-US>Lambda</SPAN><SPAN lang=ja>のレイヤーに追加する</SPAN></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 8.278in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.176in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>API 
+Gateway</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:23</P></DIV>
+<DIV 
+style="WIDTH: 8.278in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Lambda</SPAN><SPAN lang=ja>と連携</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5CB3(1).tmp" width=790 
+height=300></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 6.881in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.288in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">CORS</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月31日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:01</P></DIV>
+<DIV 
+style="WIDTH: 6.881in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="API Gateway側の設定&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;/メソッド&#10;-ス&#10;アクション・&#10;リソ&#10;リソースのアクシコン&#10;メソットの作成&#10;リソ-スの作成&#10;OPTION&#10;CORSの有効化&#10;リソ-ストキュメントの騙第&#10;APIアクシコン&#10;APIのデブロイ&#10;APIのインホ-ト&#10;APIトキュメントの編隼&#10;AP丨の削畭&#10;し&#10;要&#10;な不&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;リソ&#10;-ス&#10;アクション・&#10;OPTIONS&#10;CORSの有効化&#10;2やリb・日APIのケートウェイレ&#10;ロDEFAULT4)()(ロDEFAULT5)()(0&#10;スホンス&#10;メソッドOGETOOPTIONSOPOST0&#10;Access・Control-Allow・MethodsGETOPTIONSPOST0&#10;Access・Control-Allow・Headers&#10;Access・Cont「0トAOW・Orig&#10;アド八ンスト&#10;Content-Type,X-Amz-Date,Authoriz0&#10;Ⅲttp:/ハab3-kadai4-引b-20148977し0&#13;&#10;&#13;&#10;Lambda側の設定&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;lambdafunction&#10;EnvironmentX&#10;dynamo&#10;t01e&#10;00t0ヨ.resource('dynamodb'&#10;regionname=REGION)&#10;dynamo.Table(TA3LE)&#10;deflambdahandler(event,context)&#10;event('httpMethod勹&#10;data=table.scan()0Items勹&#10;ellfhttpNethOd・&#10;ーPOSTー&#10;postOata=]50n.loads(event[・boの′・&#10;ーA[cess-[ont「ロ1-A110W-methoご5・&#10;12&#10;ーA[cess-[ont「ロ1-A110W-ー&#10;ーA[cess-[ont「ロ1-A110W-Heaにe「5&#10;ー物ごe「5&#10;ーStatusCOde第222,&#10;「eturn{&#10;data={・message&#10;table.put_item(ltem&#10;p「土nt(P05t0t)&#10;successfull・}&#10;postData)&#10;ー0ロd震:ison.dumps(data)&#10;'Content-Type'&#10;ーhttp://lab3-kada14-alb-2214897721.ap-northeast-1.elb.amazonaws.com'&#13;&#10;&#13;&#10;※デプロイを忘れないように行う&#13;&#10;https://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/how-to-cors.html&#13;&#10;        'headers': {&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht5CD6(1).tmp" width=991 height=1440><BR><IMG 
+alt="        'headers': {&#13;&#10;                'Access-Control-Allow-Headers': 'Content-Type',&#13;&#10;                'Access-Control-Allow-Origin': &quot;https://d2z4j8i3ike67r.cloudfront.net&quot;,&#13;&#10;                'Access-Control-Allow-Methods': 'GET'&#13;&#10;            }&#13;&#10;" 
+src="AWS.files/mht5CE8(1).tmp" width=991 
+height=173><BR></NOBR></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.063in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.843in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN lang=en-US>API 
+Gateway</SPAN><SPAN lang=ja>アクセスログ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月31日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">18:11</P></DIV>
+<DIV 
+style="WIDTH: 11.063in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>API</SPAN><SPAN lang=ja>設定</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D0A(1).tmp" width=832 
+height=540></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>必要な</SPAN><SPAN lang=en-US>AIM</SPAN><SPAN lang=ja>ロール</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D1D(1).tmp" width=919 
+height=500></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ロググループ作成</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">↓</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">アクセスログの有効化</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D3F(1).tmp" width=1057 
+height=463></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">確認方法</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><A 
+href="https://blog.serverworks.co.jp/insight-restapi-access-log">https://blog.serverworks.co.jp/insight-restapi-access-log</A></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.875in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.086in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">EventBridge</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">18:14</P></DIV>
+<DIV 
+style="WIDTH: 7.875in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>例</SPAN><SPAN lang=en-US>1</SPAN><SPAN lang=ja>）</SPAN><SPAN 
+lang=en-US>EC2</SPAN><SPAN lang=ja>インスタンス起動時にメール送信</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D62(1).tmp" width=752 
+height=469></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D74(1).tmp" width=747 
+height=578></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5D96(1).tmp" width=749 
+height=164></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5DB9(1).tmp" width=747 
+height=558></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5DDB(1).tmp" width=749 
+height=509></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>例</SPAN><SPAN lang=en-US>2</SPAN><SPAN 
+lang=ja>）指定した時間になったらメール送信</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5E0D(1).tmp" width=747 
+height=547></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5E2F(1).tmp" width=746 
+height=376></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">一回限りなら</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5E51(1).tmp" width=750 
+height=325></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">定期的なら</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5E74(1).tmp" width=747 
+height=226></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5EA5(1).tmp" width=747 
+height=518></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5EC8(1).tmp" width=750 
+height=338></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5EFA(1).tmp" width=748 
+height=349></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5F1C(1).tmp" width=745 
+height=436></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.292in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.383in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>cloud9</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月23日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:53</P></DIV>
+<DIV 
+style="WIDTH: 5.27in; MARGIN-TOP: 0.352in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">操作するにはインターネットい接続できるようにしなければいけない</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV>
+<DIV 
+style="WIDTH: 5.042in; MARGIN-TOP: 0.481in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+style="FONT-WEIGHT: bold">環境を作成</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5F4E(1).tmp" width=480 
+height=315></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5F60(1).tmp" width=480 
+height=335></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9.15in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.306in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Code</SPAN><SPAN lang=ja>シリーズ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月23日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:56</P></DIV>
+<DIV 
+style="WIDTH: 9.15in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>CideCommit</SPAN><SPAN 
+lang=ja>　→　プライベート</SPAN><SPAN lang=en-US>Git</SPAN><SPAN 
+lang=ja>リポジトリ</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Git</SPAN><SPAN lang=ja>への</SPAN><SPAN lang=en-US>push</SPAN><SPAN 
+lang=ja>方法</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>空のリポジトリをクローンする</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>例）</SPAN><SPAN lang=en-US>Cloud9</SPAN><SPAN lang=ja>から</SPAN><SPAN 
+lang=en-US>push</SPAN><SPAN lang=ja>する方法</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>①</SPAN><SPAN lang=en-US>HTTPS</SPAN><SPAN lang=ja>のクローンをコピー</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5F83(1).tmp" width=480 
+height=172></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>②</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>Cloud9</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>にて</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>git push </SPAN><A 
+href="https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/lab3-repo1"><SPAN 
+lang=en-US 
+style="FONT-FAMILY: 游ゴシック">https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/lab3-repo1</SPAN></A><SPAN 
+lang=ja style="FONT-FAMILY: 游ゴシック">　←　コピーした</SPAN><SPAN lang=en-US 
+style="FONT-FAMILY: 游ゴシック">URL</SPAN></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">③</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>cd lab3-repo1</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>④</SPAN><SPAN lang=en-US>git add .</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>⑤</SPAN><SPAN lang=en-US>git commit -m<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>"</SPAN><SPAN lang=ja>コメント</SPAN><SPAN 
+lang=en-US>"</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>⑥</SPAN><SPAN lang=en-US>git push</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>⑦④</SPAN><SPAN lang=en-US>~</SPAN><SPAN lang=ja>⑥を繰り返す</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>CodeBuild</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ビルドプロジェクト作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5FA5(1).tmp" width=480 
+height=400></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5FC7(1).tmp" width=480 
+height=451></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5FDA(1).tmp" width=480 
+height=453></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">※環境変数は</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>buildspec.yml</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>で使用されている変数の値</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht5FFC(1).tmp" width=480 
+height=476></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>CodePipeline(ECS</SPAN><SPAN 
+lang=ja>デプロイバージョン）</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht601E(1).tmp" width=480 
+height=300></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6050(1).tmp" width=480 
+height=300></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6072(1).tmp" width=480 
+height=447></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht60A4(1).tmp" width=480 
+height=365></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 3.381in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 3.381in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>CodePipeline </SPAN><SPAN lang=ja>→　</SPAN><SPAN 
+lang=en-US>EC2</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:51</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.877in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.479in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.273in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">機械学習　概要</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.273in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">10:27</P></DIV>
+<DIV 
+style="WIDTH: 7.877in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr">
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Translate&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">自動言語翻訳サービス&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Textract&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  lang=en-US style="BACKGROUND: white">PDF</SPAN><SPAN lang=ja 
+  style="BACKGROUND: white">などのファイルからテキストを抽出する</SPAN><SPAN lang=en-US 
+  style="BACKGROUND: white">&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Transcribe&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">音声を入力し、書き起こしする&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Lex&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">チャットボット等の会話インターフェースを作成する&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Rekognition&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">機械学習を利用した画像や動画の分析を簡単に実施できる&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Polly&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">テキストを音声に変換する&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Kendra&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">様々なデータソースを横断的に検索できるサービス&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Forecast&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">統計アルゴリズムと機械学習アルゴリズムを使用して、時系列予測を実現する&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Comprehend&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">テキストから洞察を見つける自然言語処理サービス&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Lookout 
+    for Vision&nbsp;</SPAN> </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">工業製品の視覚的欠陥を正確かつ大規模に見つけることができる&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Fraud 
+    Detector&nbsp;</SPAN> </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">機械学習でオンライン不正をより早く検出する&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Lookout 
+    for Metrics&nbsp;</SPAN> </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">時系列データから異常を検出し、その発生原因の抽出までを一貫して運用管理できる&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>HealthLake&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  lang=en-US style="BACKGROUND: white">HIPAA</SPAN><SPAN lang=ja 
+  style="BACKGROUND: white">（医療保険の相互運用性と説明責任に関する法律）に準拠したサービス</SPAN><SPAN 
+  lang=en-US style="BACKGROUND: white">&nbsp;</SPAN></P>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">医療関連データの作成、読み取り、更新、削除、クエリが可能になる&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Monitron&nbsp;</SPAN> 
+    </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">産業機械の異常な動作を検出するサービス&nbsp;</SPAN></P>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">専用デバイスを取り付ける？日本では未対応&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Lookout 
+    for Equipment&nbsp;</SPAN> </LI></UL>
+  <P 
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; COLOR: black; MARGIN: 0in'><SPAN 
+  style="BACKGROUND: white">温度やモーターの回転数、湿度、水の流量、圧力など、様々なセンサーデータを機械学習により、リアルタイムに分析する&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>DevOps 
+    Guru&nbsp;</SPAN> </LI></UL>
+  <P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN 
+  style='FONT-FAMILY: "Yu Gothic"; BACKGROUND: white; COLOR: black'>アプリケーションが平常時と逸脱した動きをしたことを検知する&nbsp;<BR></SPAN><A 
+  href="https://dev.classmethod.jp/articles/amazon-devops-guru-ga/"><SPAN 
+  style="FONT-FAMILY: 游ゴシック; BACKGROUND: white">【簡単導入】機械学習で運用を効率化！Amazon DevOps 
+  Guruを有効化してみた | DevelopersIO (classmethod.jp)</SPAN></A><SPAN 
+  style="FONT-FAMILY: 游ゴシック; BACKGROUND: white; COLOR: black">&nbsp;</SPAN></P>
+  <UL 
+  style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+  type=disc>
+    <LI lang=en-US 
+    style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: black"><SPAN 
+    style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; BACKGROUND: white'>Personalize&nbsp;</SPAN> 
+    </LI></UL>
+  <P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN 
+  style='FONT-FAMILY: "Yu Gothic"; BACKGROUND: white; COLOR: black'>レコメンドシステム&nbsp;<BR></SPAN><A 
+  href="https://dev.classmethod.jp/articles/yoshim-amazon-personalize-tutorial/"><SPAN 
+  style="FONT-FAMILY: 游ゴシック; BACKGROUND: white">Amazon Personalizeを使ってみた | 
+  DevelopersIO (classmethod.jp)</SPAN></A><SPAN 
+  style="FONT-FAMILY: 游ゴシック; BACKGROUND: white; COLOR: black">&nbsp;</SPAN></P></UL></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.511in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.652in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>SageMaker</SPAN><SPAN lang=ja>ノートブック</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.096in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P></DIV>
+<DIV 
+style="WIDTH: 10.511in; MARGIN-TOP: 0.245in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Python</SPAN><SPAN lang=ja>などを書くことができる</SPAN><SPAN 
+lang=en-US>Jupiter</SPAN><SPAN lang=ja>のインスタンスを立ち上げることができる</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht60C6(1).tmp" width=1001 
+height=430></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht60E9(1).tmp" width=1005 
+height=433></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht610B(1).tmp" width=560 
+height=406></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht612D(1).tmp" width=562 
+height=488></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.521in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.675in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">IOT 
+Core</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月24日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">10:10</P></DIV>
+<DIV 
+style="WIDTH: 7.521in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="モノ作成&#13;&#10;&#13;&#10;&#13;&#10;iot core mono2 2023-08-24 115919.jpg 自動生成された代替テキスト: &#10;モノのプロバティ&#10;モノの名前&#10;b3-devi圧2&#10;文字、数字、ハイフン、&#10;ん。&#10;追加設定&#10;コロン、&#10;またはアンタ-スコアのみを言む-意の名前を入力します。モノの名前にスペ-スを言めることはてきませ&#10;これらの設定を使用して、モノの理、管理、検索に役立っ詳篭を這加てきます。&#10;〇名前イ1きシ1フトウ&#10;0シアトウがありません&#10;のステ-タス信報を取得、更新、または削することもてきます。&#10;Device5dロwにより、接続されたテパイスは状弭をAWSと同期できます。HTTPまたはMQTTトヒックを使用して、&#10;DeviceShadow&#10;Packagesandveions-optional&#10;請求クル-プ-オプション&#10;モノのクル-プ-オプション&#10;検索可能なモノの属性-オプション&#10;モノのタイプ-オプション&#10;モノは、名前のないシ11トウを1ったけ持っことができます。&#10;〇名前のないシアトウ(クラシック)&#10;理的にクル-プ化します。&#10;煢なる名前の複数のシ11トウを作成してプロバテイへのアクセスを管理し、テパイスプロバティを論&#10;このモノのシ11トウ&#10;キマンセル&#13;&#10;&#13;&#10;iot core mono3 2023-08-24 115949.jpg 自動生成された代替テキスト: &#10;デバイス証明書を設定ーオプション情報&#10;デバイスには、AWSloTに接続するために証明害が必要です。今すぐデバイスの証明を登録する方法を選択するか、後でデバ&#10;イス用の証明を作成して登録てきます。適切なホリシ-を含むアクテイプな証明がないと、デバイスからAWSloTに接続&#10;〇[SRをアップロ-ド&#10;独目の証機によって恚名された証明書を使用します。&#10;〇自分の証明を使用&#10;AWSIOTの認証機まを使用して、証明碧、パプリックキ-、およびプライベ-トキ-を生成します。&#10;0新しい証明をき動生成(匯)&#10;デバイス証明書&#10;することはできません。&#10;このモノの証明書を作成し、後て証明書にホリシ-をアタッチてきます。&#10;〇今回の証明の作成をスキップ&#10;CAを登録し、1つまたは複数のテパイスに独巨の証明を使用します。&#10;キマンセル&#10;戻る&#13;&#10;&#13;&#10;" 
+src="AWS.files/mht614F(1).tmp" width=1083 height=1440><BR><IMG 
+alt="&#13;&#10;※証明書のダウンロードを忘れない&#13;&#10;iot core mono crt 2023-08-24 141056.jpg 自動生成された代替テキスト: &#10;証明書とキ-をタウンロート&#10;AWSに接続できるように、証明とインスト-ルするキ-ファイルをデバイスにタウン&#10;ロ-トします。&#10;デバイス証明書&#10;キ-ファイルはこの証明耆に固有てあり、この弋-シを離れるとタウンロ-トてきません。今すぐタウ&#10;X&#10;証明耆は今すぐアクテイプ化することも、後てアクテイプ化することもてきます。テパイスがAW引矼&#10;に接続するためには、証明耆がアクテイプてある必要があります。&#10;デバイス証明&#10;157[ョd2f982…tpemェ「t&#10;キ-ファイル&#10;証明害をアクテイプ化&#10;凹タウンロ-ド&#10;ンロ-トして、安全な場所に保存してくたさい。&#10;△この上明のキ-ファイルをタウンロ-トてきるのは、この寺のみてす。&#10;八プリックキ-ファイル&#10;157[ョdef982Ef495[1052f2…b[08270-pubⅱc.pemまey&#10;プライへ-トキ-ファイル&#10;157[ョdef982Ef495[105ef2…[08ョ70-privat色pem.key&#10;ル-トCA証明書&#10;凹タウンロ-ド&#10;凹タウンロ-ド&#10;使用しているテ-タ工ントホイントと琩号スイ-トのタイプに対応するル-トCA証明ファイルをダ&#10;ウンロ-トします。ル-トCA証明は後でダウンロ-トすることもできます。&#10;Amazon信頼サ-ヒスエントホイント&#10;RSA2048ヒットキ-:AmazonルートCA1&#10;Amazon信頼サーヒスエントホイント&#10;E〔〔256ヒットキー:Amョzon丿し-ト〔A」&#10;凹タウンロ-ド&#10;凹タウンロ-ド&#10;ここて必要なル-トCA証明が表示されない合AWSloTでは追加のル-トCA証明&#10;がサホ-トされます。これらのル-トCA証明なとは、デヘロッ八-カイドて入手で&#10;きます。詳細はこちら匕&#10;m了&#13;&#10;&#13;&#10;サンプルコードのあるGitをクローンする&#13;&#10;git clone https://github.com/aws/aws-iot-device-sdk-python-v2.git&#13;&#10;&#13;&#10;テスト方法&#13;&#10;python3 pubsub.py --endpoint <endpoint>--cert <file>--key <file>--ca_file <file>&#13;&#10;エンドポイント&#13;&#10;iot core endpoint 2023-08-24 140550.jpg 自動生成された代替テキスト: &#10;Greeng虍デノ(イス&#10;LPWANデバイス&#10;ソフトウェア八ッケ-&#10;新規&#10;リモ-トアクション&#10;→言をお聞かせくだ声い&#10;トキュメント匕&#10;注目される機能&#10;請求クル-プ&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証第関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;フリ-トメトリクス&#10;95に有益な信報を記録するために、AWSloTロク記録を盲理できます。&#10;AWSloT>&#10;設定&#10;設定&#10;デバイスデ-タ工ントホイント情報&#10;テパイスは、アカウントのテパイステ-タ工ントホイントを使用してAWSに接続できます。&#10;0&#10;各モノには、このエントホイントて使用可能なRESTAPIがあります。MQTTクライアントとAWSIOTデ八イスSDK匕&#10;TLSバ-ラョンやサホ-トされている号スイートなどのTLS設定をカスタマイズするには、セキュリティホリラーを択します。&#10;セキュリティホリシ-を選択情報&#10;0ョW61t711292[0-ヨな.iotp-no戊heヨt-1mョzonawsェ0m&#10;ェンドホイント&#10;もこのエントホイントを使用します。&#10;10TSecurityPolicyTLSI210201501&#10;セキュリティホリシ-を比匕&#10;トメイン設定&#10;トメイン設定を作成して、テパイスのAW引。T朝肥への移行アプリケ&#10;トアイテンティティの騅持などのタスクを簡化てきます。&#10;-ションインフラストラクチ11のAWST〔ロ肥′、、の移行プラン&#10;0&#10;アクツョンヤ&#10;名前&#10;トメイン設定を作成&#10;ドメイン名&#10;ステ-タス&#10;ドメイン設定を作成&#10;ドメイン設定がありません。&#10;ドメイン設定がありません&#10;サーヒスタイプ&#10;ログ情報&#10;CloudWatchLo&#10;更新日&#10;ロクの管埋&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht6172(1).tmp" width=1083 height=1440><BR><IMG 
+alt="iot core endpoint 2023-08-24 140550.jpg 自動生成された代替テキスト: &#10;Greeng虍デノ(イス&#10;LPWANデバイス&#10;ソフトウェア八ッケ-&#10;新規&#10;リモ-トアクション&#10;→言をお聞かせくだ声い&#10;トキュメント匕&#10;注目される機能&#10;請求クル-プ&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証第関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;フリ-トメトリクス&#10;95に有益な信報を記録するために、AWSloTロク記録を盲理できます。&#10;AWSloT>&#10;設定&#10;設定&#10;デバイスデ-タ工ントホイント情報&#10;テパイスは、アカウントのテパイステ-タ工ントホイントを使用してAWSに接続できます。&#10;0&#10;各モノには、このエントホイントて使用可能なRESTAPIがあります。MQTTクライアントとAWSIOTデ八イスSDK匕&#10;TLSバ-ラョンやサホ-トされている号スイートなどのTLS設定をカスタマイズするには、セキュリティホリラーを択します。&#10;セキュリティホリシ-を選択情報&#10;0ョW61t711292[0-ヨな.iotp-no戊heヨt-1mョzonawsェ0m&#10;ェンドホイント&#10;もこのエントホイントを使用します。&#10;10TSecurityPolicyTLSI210201501&#10;セキュリティホリシ-を比匕&#10;トメイン設定&#10;トメイン設定を作成して、テパイスのAW引。T朝肥への移行アプリケ&#10;トアイテンティティの騅持などのタスクを簡化てきます。&#10;-ションインフラストラクチ11のAWST〔ロ肥′、、の移行プラン&#10;0&#10;アクツョンヤ&#10;名前&#10;トメイン設定を作成&#10;ドメイン名&#10;ステ-タス&#10;ドメイン設定を作成&#10;ドメイン設定がありません。&#10;ドメイン設定がありません&#10;サーヒスタイプ&#10;ログ情報&#10;CloudWatchLo&#10;更新日&#10;ロクの管埋&#13;&#10;&#13;&#10;&#13;&#10;証明書のポリシーを変更することもできる&#13;&#10;iot core policy 2023-08-24 140446.jpg 自動生成された代替テキスト: &#10;ホリシーを編集:lab3-poIicy(バ-ション5)&#10;ホリシーステートメント&#10;ホリシーの例&#10;ホリシ-トキュメント情報&#10;」50N&#10;AWSIホリラーには1つ以上のホリシ-ステ-トメントが言まれています。名ホリシ-ステ-トメントには、アクシ三ン、リソ-ス、およびリソ-スによってアクシ三ンを許可または拒否する効ミが言まれます。&#10;ホリシ-リソ-ス&#10;ヨm:ョw宝iot:ヨp-no「theäst-1:50872g62026」:client/信b」-&#10;arn:aws:iot:ap-northeäst-l:50872g52026」:topに/testハ&#10;arn:aws:iot:ap-northeast-l:50872g62026」:topに/teハ&#10;ホリシ-アクション&#10;iot:Connect&#10;ホリシ-効果&#10;許可&#10;許可&#10;許可&#10;許可&#10;新しいステ-トメントを追加&#10;iot:Publish&#10;ヨm:ョw宝iot:ョp-no「thea-1:50872g62026」:topi朝Ite「/t&#10;iot:Subscribe&#10;ホリシ-バーションのステ-タス&#10;アクテイプなホリシ&#10;ロ第したバ-ションをこのホリシ-のアクテイプバ-シンとして設定します。&#10;この設定は、ホリシ-の詳細のペ-シて後て変霆できます。&#10;キマンセル&#10;9ツ尸保&#13;&#10;&#13;&#10;&#13;&#10;メッセージのルーティングからどのAWSサービスにルーティングするかを選択できる（例：Lambda）&#13;&#10;iot core message rule 2023-08-24 140640.jpg 自動生成された代替テキスト: &#10;フリ-トメトリクス&#10;リモ-トアクション&#10;新規&#10;ソフトウェア八ッケ-&#10;LPWANデ八イス&#10;Greengデノ(イス&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証第関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;AWSloT>メッセ=ンのル=テ丕ンク>ル=ル>ル-ルを作成&#10;ステップ1&#10;ル-ルのプロバティを指定&#10;ステップ当&#10;ステップ2&#10;SQLステ-トメントを設定&#10;確と作成&#10;ステップ4&#10;ル-ルアクションをアタッチ&#10;丿レー丿レのプロ八ティを指定&#10;ル-ルリソ-スには、MQTTトヒックストリームに基づくアクションのリストがまれます。&#10;ル-ルのプロバティ&#10;ル-ル名&#10;b弖u厄&#10;英数字の文字列を入力します。アンタ-スコア(」文字は使用できますが、スペ-スは使てきません。&#10;ル-ルの説明-オプション&#10;ル-ルにする這加の詳細を、他のユ-ザ-が確認てきるようにするための説明を入力します。&#10;新しいル-ルの説明&#10;,タク-オプション&#10;このリソ-スに関連付けられているタクはありません。&#10;タクを追加&#10;さらに1個のタクを追加できます。&#10;キマンセル&#13;&#10;&#13;&#10;iot core message rule2 2023-08-24 140800.jpg 自動生成された代替テキスト: &#10;Gre曰lgraデノ(イス&#10;LPWANデバイス&#10;ソフトウェア八ッケ-&#10;新規&#10;リモ-トアクション&#10;意をお聞かせくだ声い&#10;トキュメント&#10;注目される機能&#10;求クル-プ&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証第関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;フリ-トメトリクス&#10;行1、列26&#10;ステップ1&#10;ル-ルのプロバディを指&#10;ステップ当&#10;ステップ2&#10;SQLステ-トメントを設定&#10;確と作成&#10;ステップ4&#10;ル-ルアクションをアタッチ&#10;SQLステ-トメントを設定&#10;情報&#10;簡第化されたSQL文を追加して、MQTTトヒックで受信したメッセ-シをフィルタリンクし、他の所にデ-タをブッシュします。&#10;SQLステ-トメント&#10;50Lのバ-ション&#10;ル-ルを評価するときに使用する50L丿し-儿工ンランのバ-&#10;2016-0」-2」&#10;50Lステ-トメント&#10;)′ョン。&#10;下(りSELECTCAttribute>FROM、To[FiltersWHERE<Condition>を{用して50しステ&#10;てす。詳細については、「Aw引矼50Lリファレンス」を参羂してくたさい。&#10;SELECT・FROMーtest/Iab3ー&#10;50L&#10;ートメントを入力します。&#10;たとえばSELECTtemperatureFROM'iot/topic'WHEREtemperature》ら0&#10;0&#13;&#10;" 
+src="AWS.files/mht6194(1).tmp" width=1083 height=1440><BR><IMG 
+alt="iot core message rule2 2023-08-24 140800.jpg 自動生成された代替テキスト: &#10;Gre曰lgraデノ(イス&#10;LPWANデバイス&#10;ソフトウェア八ッケ-&#10;新規&#10;リモ-トアクション&#10;意をお聞かせくだ声い&#10;トキュメント&#10;注目される機能&#10;求クル-プ&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証第関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;フリ-トメトリクス&#10;行1、列26&#10;ステップ1&#10;ル-ルのプロバディを指&#10;ステップ当&#10;ステップ2&#10;SQLステ-トメントを設定&#10;確と作成&#10;ステップ4&#10;ル-ルアクションをアタッチ&#10;SQLステ-トメントを設定&#10;情報&#10;簡第化されたSQL文を追加して、MQTTトヒックで受信したメッセ-シをフィルタリンクし、他の所にデ-タをブッシュします。&#10;SQLステ-トメント&#10;50Lのバ-ション&#10;ル-ルを評価するときに使用する50L丿し-儿工ンランのバ-&#10;2016-0」-2」&#10;50Lステ-トメント&#10;)′ョン。&#10;下(りSELECTCAttribute>FROM、To[FiltersWHERE<Condition>を{用して50しステ&#10;てす。詳細については、「Aw引矼50Lリファレンス」を参羂してくたさい。&#10;SELECT・FROMーtest/Iab3ー&#10;50L&#10;ートメントを入力します。&#10;たとえばSELECTtemperatureFROM'iot/topic'WHEREtemperature》ら0&#10;0&#13;&#10;&#13;&#10;iot core message rule3 2023-08-24 140839.jpg 自動生成された代替テキスト: &#10;フリ-トメトリクス&#10;リモ-トアクション&#10;新規&#10;ソフトウェア八ッケ-&#10;LPWANデバイス&#10;Greengrassデノ(イス&#10;童をお背かせくだ声い&#10;トキュメント匕&#10;注目される機&#10;請求クル-プ&#10;デ八イスソフトウェア&#10;フリ-トハプ&#10;検出&#10;監査&#10;オ-ソライザ-&#10;ロ-ルエイリアス&#10;認証機関&#10;ホリシ-&#10;証明&#10;イントロタクション&#10;,セキュリティ&#10;保持されたメッセ-ジ&#10;送信先&#10;,メッセ-ジのル-ティンク&#10;ステップ1&#10;確と作成&#10;ステップ4&#10;ル-ルアクションをアタッチ&#10;ステップ当&#10;SQLステ=上:ン上こを設定&#10;ステップ2&#10;ルールアクションをアタッチ情報&#10;アクションは、特定のAWSのサ-ヒスにデ-タをル-ティンクします。&#10;SQLステ-トメント&#10;戻る&#10;SELECT・FROM&#10;ーtest/1ab3ー&#10;ル-ルアクション&#10;イン(ウントメッセ-シが上記のレ-ルに一致したときに実行される1つ以上のアクションを択します。アクションは、メッセーラが到達した際に実行される追加のアクテイヒティ(テ-&#10;タへ-スへの格納、クラウト数を等び出し、通知の送信なと)を定義します。最K10個のアクションを追加できます。&#10;L引11bdョ&#10;Lambda数にメッセ-シを送る&#10;L引11bd2関数情報&#10;labiotm92&#10;工ラーアクション-オプション&#10;ル-ルアクションを追加&#10;SLATEST&#10;Lambda関数のバ-ション&#10;削除&#10;0&#10;0&#10;表示匕&#10;Lambda関数を作成匕&#10;必要に応して、ル-ル{ヴ理て問題が発生したときに実行されるアクションを設定てきます。同しル-ルの2つのル-ルアクションが失した場合、エフ-アクションは両方のエラ-を言む&#10;工ラ-アクションを追加&#10;1つのメッセーラを受け取ります。&#13;&#10;&#13;&#10;" 
+src="AWS.files/mht61B6(1).tmp" width=1083 
+height=619><BR></NOBR></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.757in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.125in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Glue</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月28日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:09</P></DIV>
+<DIV 
+style="WIDTH: 10.757in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="Crawlers作成&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue〉0240〉Addcrawler&#10;Review主紀create&#10;tep5&#10;5饉outputandscheduling&#10;tep4&#10;〔onれ9凵resecuritysettings&#10;tepー&#10;〔h00当0daい50凵r[and&#10;tep2&#10;5獸(「飜ⅵpーOP[に当&#10;、:ep1&#10;Setcrawlerproperties&#10;02W厄「details&#10;Name&#10;にbふきWに店&#10;up:0255[hヨct当5n三ー津(ctを′(on飜[hヨct当5&#10;D墜こⅱpむー-OPむon猷&#10;D0ゆれ315canbeup:0204日(わ引誕:をー31&#10;,Ta-option&#10;じに魲加nにを画•d2n0、50uて-&#10;NOね9、20〔にdwⅱh物r墜0凵色&#10;Addnew9&#10;You(ヨ卩ug加駒9、MuimumOf駒、まwは&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue〉02Wに〉Addcrawler&#10;Review主紀create&#10;5饉outputandscheduling&#10;tep4&#10;〔onれ9凵resecuritysettings&#10;きⅲ曾当&#10;(h00」2data、ou創紀&#10;、tep2&#10;5饉はawにrpropei&#10;Choosedatasourcesand〔SSie「5&#10;Data50u「(2(onfigu「2れon&#10;、凵rdきいalreadymapped[0Gに2bに&#10;0N。い毬&#10;三をctル師d載3(【0[′ョw陸d&#10;Data50u「(25(0)Ⅲ&#10;Theー:d載3当[:0ヨⅢdby物2[′ョwー当-&#10;Daーき当ou2&#10;0Yes&#10;三をctを5引行こ20ヨ!ヨこヨ10&#10;YO凵dot貢hヨ、愛anydaい凵r[-&#10;Add2dきい当ou2&#10;Pam獸に&#10;トCustomd255ih2舊-0On&#10;A035引气を′c'(、5wー物2「ヨ創、をnををを3fmt物き0ー当(ヨ0hヨnま2に靆hきd35引f′び:ョわ一物きf«m3uctT丱を0切をct物載0物h25物載d載3し&#10;Addadaい当ou「(2&#10;Previous&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;Adddaね50u2&#10;Data当洋こ0&#10;[hこ05をび三ouofdata:0&#10;Networkこonneはion-0朝′に一&#10;X&#10;0onan/it紀ー池3Nをれⅸ(31n00nし5wにわ物、」′、虻Nびーæch0町しmは!0&#10;ー継ーWOⅸ(onnれ00any餠he「当ー引三0物5画[0Ⅲ(31、0′nuー印け代&#10;bに0幻&#10;町L&#10;(に」r、2に(ⅱ0れ&#10;LOこ載iびーOf5当dきい&#10;0物is託[0凵n[&#10;Addnewconnection「乙&#10;C)2を行Ⅳ氈[oun[&#10;5」pヨ&#10;0義for師を0陸「ヨ0、れn、当path.&#10;Qz,'なh凱艝物缸し01&#10;View住&#10;0&#10;B「OW当25当&#10;Allfまdを新fil(on05当物3[物WI「師am可、pを鱈′uはしf&amp;dをr′&#10;ロ3ーヨ0bCtsまd町nMuはこ&#10;5しbq凵en[crawには凵AS&#10;Thisfieldヨ9bheldー:ヨ付靆、ヨ、当d画いu′(-&#10;002Wー2にb40に0&#10;0き北f飜deヨ9謝0h/b0ー0き義&#10;(002WーnにWb0に00猷y&#10;Onツん一協加n、」foに鰤当物載vad&amp;dを山を信ロ3一とをはヨwにd-丨「物hをm3&#10;[れb靆第wにon、ub新d9に飜-&#10;C)[WIbadーに、にn&#10;Rをツonん引ヨ~31、一、をn!0[00k&amp;foに鰤当!0&#10;ロ5測1メ。。nツ2b[fi&#10;ーコ[江にdeれに、mきtChⅱpattern&#10;(an(猷&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue〉02Wに〉Addcrawler&#10;Review主紀create&#10;5饉outputandscheduling&#10;、tep4&#10;朝れ的2“(uy“山n魲&#10;tepー&#10;[にif-iC&#10;〔h00当0daい50鰤[and&#10;tep2&#10;5饉はawにrpropei&#10;Configuresecuritysettings&#10;M「0厄ん&#10;Eⅵⅱ当IAMrole&#10;AWSGに05Vに0R0に・01&#10;(「に2t2newIAMroに&#10;Update(ho当enIAM「0に&#10;01一4ー飜(載ツ物きAW三0し地[三0andh物fi、・AW、Gluを三、にをR飜←・(ヨ0bき一dヨ!をま&#10;LakeFormationconfiguration-optional&#10;びヨwr:0L「onヨ00卩[denをforヨwしn」物きd載uに色Learnn10r2-「乙&#10;ーコ[0[ヨkeFormationびにdenむ、forcrき′川ng5当daい鰤[2&#10;Securityconfiguration-0t池n&#10;kbヨト[宿gれ61withヨ[当に/(on丱れ0&#10;こわng物を物[w′!0い、「0r0物000をdをnーfo′びヨwしngd載3三」「物画uにきr・当dヨ物誕(oun【き物き′ををd(0しn凵0物当wを靆hき0&quot;e「びま&quot;ーー物dヨ物uにヨ0[一d!0物3[[0u001叩に新、」.Cll[3log.eberHudi画&#10;5にこ山i[y[0猷第靆池n&#10;[hこ05を3当しnt/[00h9い画れ312をnヨb載一をtwyptio卩0卩物き、:000uさW載[h-&#10;Previous&#10;0&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht61D8(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue〉02Wに〉Addcrawler&#10;Review主紀create&#10;5饉outputandscheduling&#10;、tep4&#10;朝れ的2“(uy“山n魲&#10;tepー&#10;[にif-iC&#10;〔h00当0daい50鰤[and&#10;tep2&#10;5饉はawにrpropei&#10;Configuresecuritysettings&#10;M「0厄ん&#10;Eⅵⅱ当IAMrole&#10;AWSGに05Vに0R0に・01&#10;(「に2t2newIAMroに&#10;Update(ho当enIAM「0に&#10;01一4ー飜(載ツ物きAW三0し地[三0andh物fi、・AW、Gluを三、にをR飜←・(ヨ0bき一dヨ!をま&#10;LakeFormationconfiguration-optional&#10;びヨwr:0L「onヨ00卩[denをforヨwしn」物きd載uに色Learnn10r2-「乙&#10;ーコ[0[ヨkeFormationびにdenむ、forcrき′川ng5当daい鰤[2&#10;Securityconfiguration-0t池n&#10;kbヨト[宿gれ61withヨ[当に/(on丱れ0&#10;こわng物を物[w′!0い、「0r0物000をdをnーfo′びヨwしngd載3三」「物画uにきr・当dヨ物誕(oun【き物き′ををd(0しn凵0物当wを靆hき0&quot;e「びま&quot;ーー物dヨ物uにヨ0[一d!0物3[[0u001叩に新、」.Cll[3log.eberHudi画&#10;5にこ山i[y[0猷第靆池n&#10;[hこ05を3当しnt/[00h9い画れ312をnヨb載一をtwyptio卩0卩物き、:000uさW載[h-&#10;Previous&#10;0&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlueServiceRole・01&#10;ThlSpolicyⅥbeusedtorGlueCwに「andJ00execution.Please00NOTdeに1&#10;&quot;2e12-10-17&quot;&#10;&quot;Statement&quot;&#10;&quot;s3:GetObject&quot;&#10;&quot;s3:PutObject&quot;&#10;&quot;Action&#10;料A110国料&#10;&quot;Effect'&#10;&quot;VisualEditor0&quot;&#10;&quot;Sid&quot;&#10;ロ&#10;田&#10;an:ヨ三:S3:&#10;an:5:S3:&#10;AWSGIueServiceRole&#10;:ahaws-bucket-01&quot;&#10;:ahaws-bucket-01/*&quot;&#10;AWS管理&#10;コヒー&#10;Policyfo「AWSGlueservicerowhichallowsaccesstorelatedser.&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue〉0240〉Addcrawler&#10;Review主紀create&#10;、tep5&#10;5獸0に2れd“huling&#10;tep4&#10;〔onれ9凵reこ鰤isettings&#10;tepー&#10;[にihに&#10;〔h00当0daい50鰤[and&#10;tep2&#10;5饉はawにrpropei&#10;Setoutputandscheduling&#10;Outputconfiguration届。&#10;T計9dきいb基2&#10;deに凵は&#10;(に」r、2に(ⅱ0れ&#10;0&#10;Adddきいb話に「乙&#10;Tablenan肥pれ、-0朝′に一&#10;Maximumいbにむに引に-optional&#10;Thisfield驪物をm&quot;mum価ーmbero「に飜山きロ「加、を0当載ⅲ物きを0:ーhヨ!ー5n山一物当を当山↓びヨwーにfいⅵ物anを0にn醺驪【物き0「tom載にツg当′載物を引b当of物引、顰ndi'ー物をdヨわ一-&#10;Ondロい主紀&#10;Frequency&#10;02W厄「schedule&#10;トAdvancedOP&#10;20ーn′90[を「リ衵no&#10;Youcanむm←bhをdufロ′)0し「ロ*le新AWS-Thきdをnⅲ31Ofを一をびun4、を[′01「nーLæm「&#10;Previous&#13;&#10;&#13;&#10;データソース追加&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGに2&#10;lab3&#10;[rawに&#10;lab3&#10;02W厄「p「0P2「tie、&#10;Name&#10;Maximumいbに[忻hoに&#10;トAdvancedtⅲ19、&#10;[可[〕亜至〕]匚亟」[〕区亟]&#10;い費叩d載ぐ」Tロ&#10;ーu2ま20~当0ま14カ4&#10;5いに&#10;ロ話&#10;IAMroに&#10;AWSGに05Vに0R0に-01「乙&#10;5[こ山i[y[0猷第靆池n&#10;Ta魲&#10;D」いb基0&#10;de信凵は&#10;LakeFormationこonれ9凵raむon&#10;(「飜「uns&#10;Schedule&#10;Data、ou「(に、&#10;Data50u「(25(2)届。&#10;Theー:d載3当[:0ヨⅢdby物2[′ヨwー当-&#10;Tableprefix&#10;0&#10;Pam獸に&#10;Addadaい当ou「(2&#10;C)&#10;JDgC&#10;02ーき当ou2&#10;z/なh艝のkにし01′&#10;unicorndb,ß%&#13;&#10;" 
+src="AWS.files/mht61FB(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;AWSGに2&#10;lab3&#10;[rawに&#10;lab3&#10;02W厄「p「0P2「tie、&#10;Name&#10;Maximumいbに[忻hoに&#10;トAdvancedtⅲ19、&#10;[可[〕亜至〕]匚亟」[〕区亟]&#10;い費叩d載ぐ」Tロ&#10;ーu2ま20~当0ま14カ4&#10;5いに&#10;ロ話&#10;IAMroに&#10;AWSGに05Vに0R0に-01「乙&#10;5[こ山i[y[0猷第靆池n&#10;Ta魲&#10;D」いb基0&#10;de信凵は&#10;LakeFormationこonれ9凵raむon&#10;(「飜「uns&#10;Schedule&#10;Data、ou「(に、&#10;Data50u「(25(2)届。&#10;Theー:d載3当[:0ヨⅢdby物2[′ヨwー当-&#10;Tableprefix&#10;0&#10;Pam獸に&#10;Addadaい当ou「(2&#10;C)&#10;JDgC&#10;02ーき当ou2&#10;z/なh艝のkにし01′&#10;unicorndb,ß%&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;Adddaね50u2&#10;Data当洋こ0&#10;[び三ouofdata:0&#10;ロ2」r、2に(ⅱon&#10;〔聖ロ池n&#10;」Dgこ&#10;、3加ョ物dョー0し&#10;Addnewconnection「乙&#10;しnicomdb/%&#10;Includepath&#10;X&#10;0&#10;Youanbに一を物をpをにをnー朝d滬に[:を′ヨh物0「にbは「0「d載3b35ⅲヨー鋼PPOは&#10;三dー画、1′Myロヨ:ヨbヨ′トーにこわ物′加0物hallⅲmthnー4ー0第きb覊色&#10;0ー誕D載新3ndM)0[do市:PPO代hをmaい物をpヨ物.を.を03「Mーロ3bヨ驪/-「0&#10;0ー誕d載3b3驪wにわou:L.Myロ352&#10;nbe物当物、陸mにしhe「旧)物驪(きn画一津&#10;に日~VにE.、24Eー0dedヨbをhM)載abをmust物驪内にを0画一津&#10;に日ⅣにE-、悩&#10;Aを」心61n10いdきい-OPび31猷&#10;、!新dⅲ31mをd画いp′0P2「fo「物き0ー町一00義ー&#10;ロ[江にdem誂dⅲpattern&#13;&#10;&#13;&#10;右上のRun crawlerで実行&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSG1ue〉0〉&#10;lab3&#10;Lab3&#10;02W厄「p「0P2「ties&#10;D墜こⅱpむー&#10;Maximumいbに[忻hoに&#10;トAdvancedtⅲ19、&#10;Schedule&#10;ーユdo&#10;Thelist(朝をrⅢ第fo′物0ー「&#10;(「aw厄「runs(2)&#10;5い「いim酬UTC)&#10;[可[〕亜至〕]匚亟」匚亜こ」&#10;い費叩d載ぐ」Tロ&#10;ー第u2ま20~当0ま14カ4&#10;5いに&#10;Tableprefix&#10;Data、ou「(&#10;ロ話&#10;Ta魲&#10;IAMroに&#10;AWSGに05Vに0R0に-01「乙&#10;5[こ山i[y[0猷第靆池n&#10;Aー当[2町202」飜07:当ま」7&#10;Agu2町202」飜07:51:」9&#10;Endⅱ飛(UTC)&#10;Database&#10;deに凵は&#10;LakeFormationこonれ9凵raむon&#10;ロ月にと/0づをand2n92&#10;マ|(しにntハ2費山2ⅱonマ&#10;0」min18&#10;4な&#10;0&#10;Stoprun&#10;Viewrund獸ヒ&#10;0&#10;OPUhours&#10;Table(h2n92、&#10;]いbにChき變90Op計[心61Chき&#10;O&#10;C)&#10;凵9凵2印202」07:48:21&#10;凵9凵28′202」07:」7:54&#10;〇completed&#10;〇completed&#10;031」&#10;0℃86&#13;&#10;&#13;&#10;connectionstringを追加&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGに2〉(onl肥0&#10;Connectors。&#10;Marketplace[onneは0&#10;Subscribe[0こonneロ0行0m、、雪p計tneー0pand&#10;YOdata当0も墜-&#10;Custom[onne[to&#10;[onne靆or[0exp主紀)0凵rdヨい&#10;50凵r[に5-[reaむng[し0n1[onncこ[0r5「乙&#10;(「2」tecustomconnector&#10;GOtOAWSMarketplace「乙&#10;(onne[to(0)ん&#10;m画13;を)「(を0「し5をび11ー0(載2[00n00n、&#10;Q[こonnen、町0霞y&#10;Name&#10;[きmodified&#10;Connections(6)Ⅲ&#10;Actions・&#10;(「に2t2connection&#10;Q[こonnen、町0′ty&#10;Name&#10;0&#10;引1肇印&#10;0&#10;にb2-MQL&#10;O&#10;いblRDSMゝQL&#10;C)&#10;しbl、50L&#10;0&#10;MYSQL&#10;C)&#10;MSSQL&#10;(′にatejob&#10;[2mo山新にd&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;」しn0202」&#10;」しn0町202」&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht621D(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;AWSGに2〉(onl肥0&#10;Connectors。&#10;Marketplace[onneは0&#10;Subscribe[0こonneロ0行0m、、雪p計tneー0pand&#10;YOdata当0も墜-&#10;Custom[onne[to&#10;[onne靆or[0exp主紀)0凵rdヨい&#10;50凵r[に5-[reaむng[し0n1[onncこ[0r5「乙&#10;(「2」tecustomconnector&#10;GOtOAWSMarketplace「乙&#10;(onne[to(0)ん&#10;m画13;を)「(を0「し5をび11ー0(載2[00n00n、&#10;Q[こonnen、町0霞y&#10;Name&#10;[きmodified&#10;Connections(6)Ⅲ&#10;Actions・&#10;(「に2t2connection&#10;Q[こonnen、町0′ty&#10;Name&#10;0&#10;引1肇印&#10;0&#10;にb2-MQL&#10;O&#10;いblRDSMゝQL&#10;C)&#10;しbl、50L&#10;0&#10;MYSQL&#10;C)&#10;MSSQL&#10;(′にatejob&#10;[2mo山新にd&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;Aし92&#10;202」&#10;」しn0202」&#10;」しn0町202」&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue>〔onne〔to店>Createconnection&#10;CreateconnectionInfo&#10;Connectionp「0P2「tiesInfo&#10;Name&#10;Enter2uniquenヨn12foryourconnection.&#10;信bろmys印&#10;Connectiontype&#10;AmazonRDS&#10;ロ&#10;Require55Lconnection&#10;Theconnectionⅷはfailifit'sunabletoconnectoverSSL&#10;Databaseengine&#10;Description-optional&#10;MySQL&#10;Descriptionscanbeupto2048charactersn&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;Connectionaccess&#10;Daねbaseinstances&#10;ProvisionedAmazonRelationalDョねb2Servicestan(e&#10;信bろ-mys印&#10;Databasen引11e&#10;unicorndb&#10;Credentialtype&#10;0Usernameandpassword&#10;〇AWSSecretsManヨge「&#10;Username&#10;admin&#10;Password&#10;マ&#10;C&#10;Cancel&#10;eateconnection&#13;&#10;" 
+src="AWS.files/mht6230(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;Connectionaccess&#10;Daねbaseinstances&#10;ProvisionedAmazonRelationalDョねb2Servicestan(e&#10;信bろ-mys印&#10;Databasen引11e&#10;unicorndb&#10;Credentialtype&#10;0Usernameandpassword&#10;〇AWSSecretsManヨge「&#10;Username&#10;admin&#10;Password&#10;マ&#10;C&#10;Cancel&#10;eateconnection&#13;&#10;ネットワーク情報を追加する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue>Connectors>&#10;lab3-mysql&#10;20208-2816:46当8.761000&#10;Lastmodified&#10;Description&#10;subnet-Oce311d65e872df99&#10;Subnet&#10;admin&#10;Username&#10;Driver〔ーヨ55name&#10;」DBC&#10;Connectortype&#10;ConnectiondetailsInfo&#10;b3-mys&#10;Edit&#10;ConnectionURL&#10;Delete&#10;Createjob&#10;jdbc:mysql://lab3-mysql.cnkcerumhjjp.ap-northeast-&#10;1洋dS.引112Z0n2W5工0n1当ろ06んnにorndb&#10;Driverpath&#10;Require55Lconnection&#10;f&#10;Securitygroups&#10;59-02信ョ022e99790202&#10;Createdon&#10;202ろ-08-2816:4ろ:17.557000&#10;Cーヨ55name&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;マNetworkoptions&#10;げyourAWSGluejobneedstorunonAmazonElasticComputeCloud匕(EC2)instancesinヨvirtualprivatecloud&#10;(VPC)subnet,youmustprovideadditionalVP〔-sp氈市[configurationinformation.&#10;VPCInfo&#10;Choo史thevirtualprivatecloudthatcontainsyourdata50u「[皀&#10;vp[-09b7e4021b8de02e7&#10;Subnetfo&#10;〔h00史thesubnetwithinyourVPC.&#10;subnet-Oce311d65E872df99&#10;2「n:aw2[2:ヨp-noheast-1:60872862026当:雪ubnetたubnet-0[2当11d65e872df99&#10;zone:ap-northeast-lヨ&#10;Security9「OupsInfo&#10;マ&#10;C&#10;Choo史oneormoresecuritygroupstoallow(2tothedata5t0「2inyourVPCsubnet.Securitygroupsare20[信tedtotheENIattached&#10;toyoursubnet.Youmustchooseatに25tonesecuritygroupwithaself-referencinginboundrulefo「allTCPPO5&#10;default&#10;59-02信ョ022e99790202X&#10;(h00&amp;20n20「け10「22(u「ityg「OLIP&#10;Cancel&#10;Savechanges&#13;&#10;&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht6252(1).tmp" width=1549 height=1440><BR><IMG 
+alt="&#13;&#10;S3をMySQLに変換する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSGlue>」0b5&#10;AWSGlueStudio&#10;Info&#10;CreatejobInfo&#10;0Visualwithヨ50uにeandtarget&#10;Startwithヨ50u「[2.ApplyMappingt虍n計ornをandta四叱&#10;〇PythonShellscripteditor&#10;Write0「uploadyourownPythonshell5びipむ&#10;SOLIrce&#10;Amazon5ろ&#10;」SON,CSV,orParquetfilesstoredinS3.&#10;〇Visualwithablankcanvas&#10;Authorusinganinteractivevisualinterface.&#10;〇」upyterNotebook&#10;Writeyourowncodeina」upyte「Notebookforinteractive&#10;development.&#10;Target&#10;Create&#10;〇Sparkscripteditor&#10;Write0「uploadyou「ownSpark[od色&#10;〇Rayscripteditor&#10;WriteyourOwncodetorunonRay.&#10;bucketbyspecifying2bucketpaththedatatarget.&#10;Amazon5ろ&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;()TrynewUI&#10;△」0bh25notbeensaved&#10;Save&#10;Run&#10;Actions&#10;Untitledjob/&#10;Version(ont「0ー&#10;Schedules&#10;Dataquality&#10;New&#10;Script&#10;」obdetails&#10;Visual&#10;Runs&#10;Outputschema&#10;Data50u「(eproperties-S3&#10;Datapreview&#10;Jロう&#10;N引11e&#10;5ろbucket&#10;Data50u「(2-S3bucket&#10;53bucket&#10;5ろsourcetypeInfo&#10;05ろlocation&#10;01005e2付20「fo旧2「inanS}bucket.&#10;〇DョねCat飜09table&#10;5ろURL&#10;Vie、&#10;Q5ろ:/たhヨWS-bu[ket-01/lab/&#10;Recursive&#10;Readinallsubdirectories.&#10;Dョねf0n11ョt&#10;」50N&#10;」sonPath-optio′10[&#10;Identifyrecordswithヨ」sonPathexpression.&#10;Browse55&#10;X&#10;T「ansform-ChangeSche..&#10;ChangeSchema&#10;ロ00&#10;Dataね「get-S3bucket&#10;S3bucket&#10;ロMultiline&#10;Indicatesif」SONrecordscan叩anmultipleⅱne&#10;cInferschema&#13;&#10;MySQLではstringはvarcharに変換する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;)TrynewUI&#10;△」0bh25notbeensaved&#10;Save&#10;Actions&#10;Untitledjob/&#10;Version(ont「0ー&#10;Schedules&#10;Dataquality&#10;New&#10;Script&#10;」obdetails&#10;Visual&#10;Runs&#10;Outputschema&#10;Transform&#10;Daねpreview&#10;Jロう&#10;Name&#10;Change5〔hema&#10;Data50u「(2-S3bucket&#10;S3bucket&#10;Nodeparents&#10;〔h00史whichnodeswillp「0ⅵdeinputsforthison&#10;(h00&amp;20n20「10「2P0「entnode&#10;5ろbucketX&#10;S3-DataSource&#10;ChangeSchema(Applymapping)&#10;Sourcekey&#10;Targetkey&#10;id&#10;id&#10;name&#10;T「ansform-ChangeSche..&#10;ChangeSchema&#10;ロ00&#10;Drop&#10;Datatype&#10;ロロロロ&#10;String&#10;varchar&#10;name&#10;email&#10;phone&#10;email&#10;phone&#10;varchar&#10;Dataね「get&#10;-S3bucket&#10;S3bucket&#13;&#10;" 
+src="AWS.files/mht6274(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;)TrynewUI&#10;△」0bh25notbeensaved&#10;Save&#10;Actions&#10;Untitledjob/&#10;Version(ont「0ー&#10;Schedules&#10;Dataquality&#10;New&#10;Script&#10;」obdetails&#10;Visual&#10;Runs&#10;Outputschema&#10;Transform&#10;Daねpreview&#10;Jロう&#10;Name&#10;Change5〔hema&#10;Data50u「(2-S3bucket&#10;S3bucket&#10;Nodeparents&#10;〔h00史whichnodeswillp「0ⅵdeinputsforthison&#10;(h00&amp;20n20「10「2P0「entnode&#10;5ろbucketX&#10;S3-DataSource&#10;ChangeSchema(Applymapping)&#10;Sourcekey&#10;Targetkey&#10;id&#10;id&#10;name&#10;T「ansform-ChangeSche..&#10;ChangeSchema&#10;ロ00&#10;Drop&#10;Datatype&#10;ロロロロ&#10;String&#10;varchar&#10;name&#10;email&#10;phone&#10;email&#10;phone&#10;varchar&#10;Dataね「get&#10;-S3bucket&#10;S3bucket&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;TrynewUI&#10;Run&#10;Save&#10;Actions&#10;△」0bhasnotbeensaved&#10;UntitledjobZ&#10;VersionControl&#10;Schedules&#10;Dataquality&#10;New&#10;Script&#10;」0bdetails&#10;Ⅵsu飜&#10;RLlns&#10;Outputschema&#10;Datapreview&#10;Datatargetproperties-MYSQL&#10;Data50uにe-5ろbucket&#10;S3bucket&#10;ロう&#10;Name&#10;MySQLtable&#10;Nodeparents&#10;Choosewhichnodeswillprovideinputsfo「thison色&#10;Cわ00520ne0「一料0「2P0「&#10;ChangeSchema&#10;ApplyMapping-TransfOrm&#10;X&#10;Transform-Change5[h色&#10;ChangeSchema&#10;000&#10;Database&#10;default&#10;マ&#10;C&#10;useruntimeparameters&#10;Table&#10;lab3unicorndbUniCO「&#10;useruntimeparameters&#10;C&#10;Datatarget-MYSQL&#10;MySQLtable&#13;&#10;IAMロールを追加する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;UntitledjobZ&#10;Ⅵsu飜&#10;Script&#10;」0bdetails&#10;DataqualityNew&#10;Schedules&#10;Version(ont「飜&#10;BasicpropertiesInfo&#10;Name&#10;Untitledjob&#10;Desc「iptionーOPⅱon叡&#10;IAMRo厄&#10;Descriptionscanbeupto2048charactersn&#10;ROー2assumedbythejobWithpermissiontoヨ[[e55yourdata5t0r2Ensurethatthis「0ー2h25permissiontoyourAmazonS3雪Ou「[2&#10;targets,temporarydirectory,scripts,andanylibrariesusedbythejob.&#10;AWSGlueServiceRole-01&#10;Type&#10;ThetypeofETLjoThis三etヨutom誂i[ヨybヨ三edOnthetypesofdatasour[2三youhaveselected.&#10;Spark&#10;GlueversionInfo&#10;Glue4.O-Supportsspark3.S信乙Python5&#10;マ&#10;C&#13;&#10;" 
+src="AWS.files/mht6296(1).tmp" width=1549 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;UntitledjobZ&#10;Ⅵsu飜&#10;Script&#10;」0bdetails&#10;DataqualityNew&#10;Schedules&#10;Version(ont「飜&#10;BasicpropertiesInfo&#10;Name&#10;Untitledjob&#10;Desc「iptionーOPⅱon叡&#10;IAMRo厄&#10;Descriptionscanbeupto2048charactersn&#10;ROー2assumedbythejobWithpermissiontoヨ[[e55yourdata5t0r2Ensurethatthis「0ー2h25permissiontoyourAmazonS3雪Ou「[2&#10;targets,temporarydirectory,scripts,andanylibrariesusedbythejob.&#10;AWSGlueServiceRole-01&#10;Type&#10;ThetypeofETLjoThis三etヨutom誂i[ヨybヨ三edOnthetypesofdatasour[2三youhaveselected.&#10;Spark&#10;GlueversionInfo&#10;Glue4.O-Supportsspark3.S信乙Python5&#10;マ&#10;C&#13;&#10;&#13;&#10;RUNして実行&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;【)TrynewUI&#10;Run&#10;Save&#10;Actions&#10;lab3S3toMySQLjOb&#10;Lastmodedon202当/8/2816:57:05&#10;VersionControl&#10;Schedules&#10;DataqualityNew&#10;Script&#10;」0bdetails&#10;Ⅵsu飜&#10;Runs&#10;Nonodeselected&#10;Chooseanodef「0n1thegraphtoViewitsconfigu「ationp「operties.&#10;Data50uにe-5ろbucket&#10;S3bucket&#10;ロう&#10;Transform-Change5〔he.&#10;ChangeSchema&#10;ロ00&#13;&#10;&#13;&#10;" 
+src="AWS.files/mht62B9(1).tmp" width=1549 
+height=1405><BR></NOBR></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 8.2in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.161in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Redshift</SPAN><SPAN lang=ja>概要</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">13:31</P></DIV>
+<DIV 
+style="WIDTH: 8.2in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>AWS</SPAN><SPAN lang=ja>上にデータウェハウスを構築することのできるマネージド型サービス</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">特徴</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>高速でスケーラブルな費用対効果の高いマネージド型の</SPAN><SPAN lang=en-US>DWH</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=ja>※</SPAN><SPAN lang=en-US>DWH=</SPAN><SPAN 
+lang=ja>データウェアハウス　直訳</SPAN><SPAN lang=en-US>"</SPAN><SPAN 
+lang=ja>データの倉庫</SPAN><SPAN lang=en-US>"</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">→定義：意思決定のため、目的別に編成され、統合された時系列で、削除や更新しないデータの集合体</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=ja>→データベースとの違い：データ分析に特化</SPAN><SPAN lang=en-US>&amp;</SPAN><SPAN 
+lang=ja>時系列に沿って、消去・更新されることなく常に蓄積される</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">→イメージ：データをそのまま突っ込む・データを使う側が加工する</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>データレイク　→　</SPAN><SPAN lang=en-US>S3</SPAN><SPAN 
+lang=ja>はデータレイクとしてデータ活用のハブとして利用できる</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ノードタイプ　→　利用するデータサイズやケースに応じてノードタイプを選択</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=en-US>RA3</SPAN><SPAN lang=ja>：もっとも高性能→データ量の増大が予想される場合に推奨</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=en-US>DS2</SPAN><SPAN lang=ja>：高密度ストレージ→低コスト・未圧縮で１</SPAN><SPAN 
+lang=en-US>TB</SPAN><SPAN lang=ja>以下で推奨</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=en-US>DC</SPAN><SPAN lang=ja>：高密度コンピューティング→高スループット、低レイテンシ用・データが</SPAN><SPAN 
+lang=en-US>500GB</SPAN><SPAN lang=ja>を超える場合に最適</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.91in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.161in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Redshift</SPAN><SPAN lang=ja>操作</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">14:38</P></DIV>
+<DIV 
+style="WIDTH: 5.91in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">クラスター作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht62DB(1).tmp" width=561 
+height=557></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht62FD(1).tmp" width=563 
+height=436></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht631F(1).tmp" width=563 
+height=576></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6342(1).tmp" width=560 
+height=554></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6364(1).tmp" width=563 
+height=446></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6386(1).tmp" width=562 
+height=373></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht63B8(1).tmp" width=563 
+height=477></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9.343in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.027in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Kinesis</SPAN><SPAN lang=ja>概要</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">15:28</P></DIV>
+<DIV 
+style="WIDTH: 9.343in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>ストリームデータ処理用の分析システムやアプリケーションを構築するサービス　→　</SPAN><SPAN 
+lang=en-US>IOT</SPAN><SPAN lang=ja>を用いたリアルタイム解析などに利用</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ストリームデータを収集・処理するためのフルマネージド型サービス</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>主に</SPAN><SPAN lang=en-US>4</SPAN><SPAN lang=ja>つのサービスで構成される</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>Amazon Kinesis Data Streams</SPAN><SPAN 
+lang=ja>：ストリームデータを処理するアプリケーションを構築　</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>→　主要サービス、データ処理用の分析サービスやアプリケーションを構築するサービス</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>Amazon Kinesis Data Firehose</SPAN><SPAN 
+lang=ja>：ストリームデータを</SPAN><SPAN lang=en-US>S3</SPAN><SPAN lang=ja>や</SPAN><SPAN 
+lang=en-US>Redshift</SPAN><SPAN lang=ja>などへ簡単に配信　</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>→　データの変換と配信</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>Amazon Kinesis Data Analytics</SPAN><SPAN 
+lang=ja>：ストリームデータを標準的な</SPAN><SPAN lang=en-US>SQL</SPAN><SPAN 
+lang=ja>クエリでリアルタイムに可視化・分析</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>→</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>Amazon Kinesis Video Streams</SPAN><SPAN 
+lang=ja>：ビデオストリーム用</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Streams</SPAN><SPAN lang=ja>と</SPAN><SPAN 
+lang=en-US>Firehose</SPAN><SPAN lang=ja>との違い</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Streams</SPAN><SPAN lang=ja>はリアルタイムにデータを処理して、</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Firehose</SPAN><SPAN lang=ja>が</SPAN><SPAN lang=en-US>60</SPAN><SPAN 
+lang=ja>秒間バッチでデータを変換・格納する</SPAN></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Streams</SPAN><SPAN lang=ja>と</SPAN><SPAN lang=en-US>SQS</SPAN><SPAN 
+lang=ja>との違い</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Streams</SPAN><SPAN lang=ja>はデータ、</SPAN><SPAN 
+lang=en-US>SQS</SPAN><SPAN lang=ja>はメッセージ</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Kinesis</SPAN><SPAN lang=ja>と連携するサービス</SPAN></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Streams</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US>Lambda</SPAN><SPAN lang=ja>→ストリームデータをポーリングして処理する</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US>EC</SPAN><SPAN lang=ja>２→データ処理を実施</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US>EMR</SPAN><SPAN lang=ja>→統合したデータ分析パイプライン</SPAN></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Firehorse</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'><SPAN 
+lang=en-US>S3</SPAN><SPAN lang=ja>・</SPAN><SPAN lang=en-US>Redshift</SPAN><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>OpenSearch</SPAN><SPAN 
+lang=ja>→ストリームの配信先として保存先を指定可能</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>&nbsp;</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Kinesis</SPAN><SPAN lang=ja>のスケーリング</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>リシャーディング→分割・結合によってシャードの数を増減させる</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>拡張ファンアウト機能→スループット専用のコンシューマーの開発</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 0.375in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 5.931in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.895in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Data Firehose</SPAN><SPAN lang=ja>作成</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">16:19</P></DIV>
+<DIV 
+style="WIDTH: 5.931in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">配信ストリーム作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht63DA(1).tmp" width=563 
+height=455></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht63FC(1).tmp" width=564 
+height=357></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht641F(1).tmp" width=563 
+height=466></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6451(1).tmp" width=554 
+height=292></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6473(1).tmp" width=564 
+height=256></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6495(1).tmp" width=565 
+height=426></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 8.16in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.19in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Amazon 
+SNS</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月30日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">18:44</P></DIV>
+<DIV 
+style="WIDTH: 8.16in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">トピック作成</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">↓</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">サブスクリプション作成</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht64A8(1).tmp" width=779 
+height=472></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.771in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.52in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Cognito</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">13:31</P></DIV>
+<DIV 
+style="WIDTH: 7.771in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>作成手順</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht64DA(1).tmp" width=733 
+height=567></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht64FC(1).tmp" width=728 
+height=444></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht651E(1).tmp" width=741 
+height=540></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6540(1).tmp" width=734 
+height=339></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6572(1).tmp" width=726 
+height=530></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6594(1).tmp" width=722 
+height=334></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht65B7(1).tmp" width=728 
+height=509></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht65D9(1).tmp" width=730 
+height=421></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht65FB(1).tmp" width=711 
+height=299></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht661D(1).tmp" width=725 
+height=573></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.986in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.736in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>ALB</SPAN><SPAN lang=ja>アクセスログ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月31日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:34</P></DIV>
+<DIV 
+style="WIDTH: 10.986in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>ALB</SPAN><SPAN lang=ja>設定</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6640(1).tmp" width=1050 
+height=456></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6662(1).tmp" width=731 
+height=135></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>S3</SPAN><SPAN lang=ja>設定</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">設定ポリシー</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><A 
+href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/enable-access-logging.html#attach-bucket-policy">https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/enable-access-logging.html#attach-bucket-policy</A></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6684(1).tmp" width=955 
+height=296></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">確認方法</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>Athena</SPAN><SPAN lang=ja>を用いて</SPAN><SPAN lang=en-US>S3</SPAN><SPAN 
+lang=ja>バケットのなかをテーブルとして出力して確認することができる</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">テーブル作成クエリー</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><A 
+href="https://docs.aws.amazon.com/ja_jp/athena/latest/ug/application-load-balancer-logs.html#create-alb-table">https://docs.aws.amazon.com/ja_jp/athena/latest/ug/application-load-balancer-logs.html#create-alb-table</A></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">変更箇所</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">テーブル名（任意）</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht66A6(1).tmp" width=426 
+height=60></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">バケット情報</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht66C9(1).tmp" width=741 
+height=63></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">例</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht66EB(1).tmp" width=846 
+height=82></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 7.579in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.693in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>System 
+Manager</P></DIV>
+<DIV 
+style="WIDTH: 1.746in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年8月24日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">16:56</P></DIV>
+<DIV 
+style="WIDTH: 7.579in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Session Manager</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">Fleet Manager　</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>→　</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>ec2</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>で</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>windors</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>で使った</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>...</SPAN></P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P lang=en-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Run 
+Command&nbsp;・・・複数のインスタンスなどに同時にコマンドを実行したりできる</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">ポリシー追加</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht670D(1).tmp" width=480 
+height=72></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">アプリケーション管理</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">・パラメータストア（様々な値を渡すことができる）</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">データベースの扱いに関してはCecret 
+Manager（ローテーション機能）の方がいい</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht672F(1).tmp" width=480 
+height=383></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">安全な文字列　→　暗号化されるので</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">aws ssm get-parameter --name /test/lab</SPAN><SPAN 
+lang=en-US style='FONT-FAMILY: "Yu Gothic"'>3</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">/param --with-decryption</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">--with-decryption・・・復号化して表示</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">・AppConfig</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in 0in 0in 0.375in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">aws appconfig get-configuration --application 
+lab</SPAN><SPAN lang=en-US style='FONT-FAMILY: "Yu Gothic"'>3</SPAN><SPAN 
+lang=ja style="FONT-FAMILY: 游ゴシック"> --environment lab</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>3</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック"> --configuration lab</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>3</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック"> --client-id test config</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック">設定変更のエラーを減らす ...</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック">複数のターゲットにわたって迅速に変更をデプロイする 
+  ...</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック">中断することなくアプリケーションを更新する ...</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック">アプリケーション全体で変更のデプロイを制御する</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; FONT-WEIGHT: bold">設定変更後にエラーが起きた際にはロールバックできる</SPAN> 
+  </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp; 
+&nbsp;徐々にデプロイしていくのですべての顧客にエラーの影響が出る前にロールバックできる</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9.14in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.362in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>Config</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">16:56</P></DIV>
+<DIV 
+style="WIDTH: 9.14in; MARGIN-TOP: 0.602in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN 
+style="FONT-FAMILY: 游ゴシック">リソースの設定を記録して評価する</SPAN><SPAN 
+style='FONT-FAMILY: "Yu Gothic"'>サービス</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>使用例）</SPAN><SPAN lang=en-US>SSH</SPAN><SPAN lang=ja>で</SPAN><SPAN 
+lang=en-US>0.0.0.0</SPAN><SPAN lang=ja>で開いているセキュリティグループを検知して自動で削除</SPAN></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN 
+style='FONT-FAMILY: "Yu Gothic"'>参考　</SPAN><A 
+href="https://dev.classmethod.jp/articles/auto-recovery-restricted-ssh-without-lambda/"><SPAN 
+style="FONT-FAMILY: 游ゴシック">https://dev.classmethod.jp/articles/auto-recovery-restricted-ssh-without-lambda/</SPAN></A></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>①必要な</SPAN><SPAN lang=en-US>IAM</SPAN><SPAN lang=ja>ロール作成</SPAN></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">サービスのユースケースは</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>Systems Manager</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>を選択</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6752(1).tmp" width=604 
+height=286></P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">必要なポリシーは</SPAN><SPAN lang=en-US 
+style="FONT-FAMILY: 游ゴシック"> </SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>"</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">ec2:RevokeSecurityGroupIngress</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>" </SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>下記のように作成する</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>{</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Version"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"2012-10-17"</SPAN><SPAN 
+style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Statement"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;[</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Sid"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Statement1"</SPAN><SPAN 
+style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Effect"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Allow"</SPAN><SPAN style="COLOR: #242424">,</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Action"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;[</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"ec2:RevokeSecurityGroupIngress"</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"Resource"</SPAN><SPAN 
+style="COLOR: #242424">:&nbsp;[</SPAN></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; MARGIN: 0in'><SPAN 
+style="COLOR: #242424">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #2a00ff">"*"</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;&nbsp;&nbsp;&nbsp;]</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>}</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Yu Gothic"; COLOR: #242424; MARGIN: 0in'><SPAN 
+lang=ja>②</SPAN><SPAN lang=en-US>Config</SPAN><SPAN 
+lang=ja>のルールを作成　→　テンプレートを使用する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6784(1).tmp" width=871 
+height=521></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Yu Gothic"; COLOR: #242424; MARGIN: 0in'>③修復の管理から修復アクションを作成する</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht67A6(1).tmp" width=873 
+height=198></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>何回も再試行する必要はないので</SPAN><SPAN lang=en-US>1</SPAN><SPAN 
+lang=ja>回、アクションの詳細はAWS-DisablePublicAccessForSecurityGroupを選択</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht67C8(1).tmp" width=671 
+height=488></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>リソースパラメータは</SPAN><SPAN lang=en-US>GroupId</SPAN><SPAN 
+lang=ja>を選択、パラメータに先に作成していた</SPAN><SPAN lang=en-US>IAM</SPAN><SPAN 
+lang=ja>ロールの</SPAN><SPAN lang=en-US>ARN</SPAN><SPAN lang=ja>を入力する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht67FA(1).tmp" width=674 
+height=482></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Cascadia Mono"; COLOR: #242424; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 8.299in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.195in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Config</SPAN><SPAN lang=ja>おまけ</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.591in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月7日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">9:18</P></DIV>
+<DIV 
+style="WIDTH: 8.299in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=en-US 
+style="FONT-FAMILY: 游ゴシック">TCP</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">の</SPAN><SPAN lang=en-US 
+style="FONT-FAMILY: 游ゴシック">80</SPAN><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">で</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>0.0.0.0/0</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>が許可されているセキュリティグループを検知したらそのインバウンドルールを削除する</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>①</SPAN><SPAN lang=en-US>AWS Systems Manager</SPAN><SPAN 
+lang=ja>からドキュメントを作成する</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>→</SPAN><SPAN lang=en-US>DisablePublicAccessForSecurityGroup</SPAN><SPAN 
+lang=ja>を検索し、アクションからクローン作製</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht681C(1).tmp" width=792 
+height=205></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>②元のドキュメントは</SPAN><SPAN lang=en-US>SSH</SPAN><SPAN lang=ja>と</SPAN><SPAN 
+lang=en-US>RDP</SPAN><SPAN lang=ja>の</SPAN><SPAN lang=en-US>0.0.0.0</SPAN><SPAN 
+lang=ja>の削除の為のドキュメントなので</SPAN><SPAN lang=en-US>RDP</SPAN><SPAN 
+lang=ja>のステップは削除して、</SPAN><SPAN lang=en-US>SSH</SPAN><SPAN 
+lang=ja>のステップは、追加の入力から</SPAN><SPAN lang=en-US>22</SPAN><SPAN 
+lang=ja>を</SPAN><SPAN lang=en-US>80</SPAN><SPAN lang=ja>と書き換える</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht683E(1).tmp" width=782 
+height=347></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6870(1).tmp" width=764 
+height=338></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>③</SPAN><SPAN lang=en-US>Config</SPAN><SPAN 
+lang=ja>から新しいルールを作成する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6893(1).tmp" width=680 
+height=238></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht68C4(1).tmp" width=677 
+height=482></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht68E7(1).tmp" width=680 
+height=342></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6909(1).tmp" width=674 
+height=486></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>パラメータの値を</SPAN><SPAN lang=en-US>80</SPAN><SPAN lang=ja>のみにする</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht693B(1).tmp" width=680 
+height=375></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>④修復アクションを追加する</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht695D(1).tmp" width=765 
+height=333></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">修復アクションは①で作成したドキュメントを使用する</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht697F(1).tmp" width=678 
+height=486></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>IAM</SPAN><SPAN lang=ja>ロールは</SPAN><SPAN lang=en-US>SSH</SPAN><SPAN 
+lang=ja>のときに使用したものと同じロールを使用する</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht69B1(1).tmp" width=679 
+height=488></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>IAM</SPAN><SPAN lang=ja>ロール例）</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht69E3(1).tmp" width=354 
+height=361></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.708in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P lang=en-US style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Network 
+Firewall</P></DIV>
+<DIV 
+style="WIDTH: 1.591in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月4日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">9:27</P></DIV>
+<DIV style="WIDTH: 9in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ファイアーフォールの種類</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>セキュリティグループ　→　インスタンスレベルのトラフィック制御</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>ネットワーク</SPAN><SPAN lang=en-US>ACL</SPAN><SPAN 
+lang=ja>　→　サブネットレベルでのアクセス制御</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>Network Firewall</SPAN><SPAN lang=ja>　→　</SPAN><SPAN 
+lang=en-US>VPC</SPAN><SPAN lang=ja>全体に対する</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>AWS WAF</SPAN><SPAN lang=ja>　→　パブリッククラウド型</SPAN><SPAN 
+lang=en-US>FW</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>AWS Shield</SPAN><SPAN lang=ja>　→　</SPAN><SPAN 
+lang=en-US>DDOS</SPAN><SPAN lang=ja>攻撃専用の</SPAN><SPAN lang=en-US>FW</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>DNS</SPAN><SPAN lang=ja>ファイアーウォール　→　</SPAN><SPAN 
+lang=en-US>DNS</SPAN><SPAN lang=ja>レベルの保護</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>AWS Firewall Manager</SPAN><SPAN 
+lang=ja>　→　複数アカウントで様々なファイアーウォールを一元的に管理</SPAN></P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P lang=en-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>AWS 
+Network Firewall</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=ja>ファイアーウォール　→　ファイアーウォールポリシーで定義されている</SPAN><SPAN lang=en-US>VPC</SPAN><SPAN 
+lang=ja>を保護する機能</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.875in'>アベイラビリティ―ゾーンごとにファイアーウォールエンドポイント専用のパブリックサブネットをネットワークファイアーウォールに提供</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ファイアーウォールポリシー　→　動作を定義するポリシー</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 2.25in'>　ステートレス及びステートフルなルールグループおよびその他の設定のコレクション</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 2.25in'><SPAN 
+lang=ja>　各ファイアーウォールは</SPAN><SPAN lang=en-US>1</SPAN><SPAN 
+lang=ja>つのファイアーウォールポリシーのみに関連付ける</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>ルールグループ　→　ルールグループはネットワークトラフィックの検査と処理方法を定義するステートレスまたはステートフル</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.5in'>なルールのコレクション</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 1.5in'><SPAN 
+lang=ja>ルールの設定には、</SPAN><SPAN lang=en-US>5</SPAN><SPAN 
+lang=ja>タプルとドメイン名のフィルタリングを含む</SPAN></P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in 0in 0in 2.25in'>　　</P>
+<P style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P>
+<P 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.222in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.184in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Yu Gothic"; MARGIN: 0in'><SPAN 
+lang=en-US>NetworkFirewall</SPAN><SPAN lang=ja>操作</SPAN></P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月4日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">16:39</P></DIV>
+<DIV 
+style="WIDTH: 11.222in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="NetworkFirewall用サブネットを作成&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSCloud&#10;AvailabilityZone&#10;AvailabilltyZone&#10;Inteeti&#10;patay.&#10;Publicsubnet&#10;VP&#10;Publicsubnet&#10;ALB&#10;Privatesubnet&#10;Privatesubnet&#10;Privateubnet&#10;AutScalinggoup&#13;&#10;ルートテーブル作成&#13;&#10;パブリックサブネット用ルートテーブル&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;ル-ト|サプネットの関連付け&#10;タグ&#10;Edgeの関連付け&#10;ル-ト伝播&#10;ル-ト(4)&#10;ル-トを編集&#10;0&#10;く&#10;Qル-トをフィルタリンク&#10;両方&#10;み&#10;済ええええ&#10;マ&#10;ステ-タス&#10;〇アクティブ&#10;〇アクティブ&#10;〇アクティブ&#10;〇アクティブ&#10;マ&#10;タ-ケット&#10;igw-Oc7a9faaeb3bdecbO&#10;local&#10;vp[e-07b008ョ967ろ51b75e&#10;vpce-Oa3bbac1e4ろfろ7624&#10;送信先&#10;0.0℃.0/0&#10;103.0.0/16&#10;103.1.0/24&#10;103.2.0/24&#13;&#10;&#13;&#10;ファイアーウォールサブネット用ルートテーブル&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;タグ&#10;サプネットの関連付け&#10;Edgeの関連付け&#10;ル-ト伝播&#10;ル-ト&#10;ル-トを編集&#10;Qル-トをフィルタリンク&#10;0&#10;く&#10;両方&#10;み&#10;済ええ&#10;伝&#10;マ&#10;.ステ--タス&#10;〇アクティブ&#10;〇アクティブ&#10;マ&#10;タ-ケット&#10;nat-0ろ[24400b[92424ョ9&#10;送信先&#10;0.0℃.0/0&#10;103.0.0/16&#13;&#10;" src="AWS.files/mht6A05(1).tmp" width=1616 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;タグ&#10;サプネットの関連付け&#10;Edgeの関連付け&#10;ル-ト伝播&#10;ル-ト&#10;ル-トを編集&#10;Qル-トをフィルタリンク&#10;0&#10;く&#10;両方&#10;み&#10;済ええ&#10;伝&#10;マ&#10;.ステ--タス&#10;〇アクティブ&#10;〇アクティブ&#10;マ&#10;タ-ケット&#10;nat-0ろ[24400b[92424ョ9&#10;送信先&#10;0.0℃.0/0&#10;103.0.0/16&#13;&#10;&#13;&#10;プライベートサブネット用ルートテーブル&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;タグ&#10;サプネットの関連付け&#10;Edgeの関連付け&#10;ル-ト伝播&#10;ル-ト&#10;ル-トを編集&#10;トに)&#10;Qル-トをフィルタリンク&#10;0&#10;く&#10;両方&#10;み&#10;済えええ&#10;伝&#10;マ&#10;ステ-タス&#10;〇アクティブ&#10;〇アクティブ&#10;〇アクティブ&#10;マ&#10;タ-ケット&#10;vp[e-07b008ョ967ろ51b75e&#10;送信先&#10;0.0℃.0/0&#10;103℃.0/16&#10;103.11.0/24&#10;local&#10;vp[e-07b008ョ967ろ51b75e&#13;&#10;&#13;&#10;関係図&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;VPC詳を表示&#10;AWS仮をネットワ-ク&#10;lab3-vpc&#10;[Ontⅱ1し厚&#10;POib.Weareimproving&#10;Giveusfeedbackoften2;&#10;today?&#10;Wasther250u「(2maphelpful&#10;X&#10;サプネット(6)&#10;このVPC内のサプネット&#10;ヨp-noheヨ-1ヨ&#10;lab3-pub-subnet-1ョ&#10;lab3-prv-subnet-1ヨ&#10;lab3-firewall-subnet-1a&#10;ヨp-noheヨ-1[&#10;lab3-pub-subnet-1[&#10;lab3-prv-subnet-1[&#10;lab3-firewall-subnet-1c&#10;ル-トテ-プル(引&#10;ネットワ-クトラフィックをリソ-スにル-ト&#10;する&#10;lab3-pub-rOute&#10;lab3-firewall-route&#10;lab3-prv-route&#10;ネットワ-ク接続(2)&#10;他のネットワ-クへ(第妾続&#10;lab3-kadai4-igv•'&#10;lab3-nat&#13;&#10;&#13;&#10;ファイアーウォールポリシー設定&#13;&#10;基本ステートフルで作成する　→　ステートレスデフォルトアクションでステートフルに転送する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;ステートレスデフォルトアクション&#10;ステ-トレステフォルトアクシンは、このホリシ-に言まれるステ-トレスル-ルク)レ&#10;レステフォルトアクシンを設定する必要があります。&#10;編集&#10;完全な八ケットに対するアクション&#10;ステ-トフルル-ルクル-プに新送&#10;-プに一致しないバケットをNetwo「kFirewallがとのように処珪すべきかを決定します。そのホリラー用にスデ&#10;フラクメント化されたバケットのアクション&#13;&#10;ステートフルのデフォルトは確立された接続のパケットをドロップを設定し、許可されたパケット以外は暗黙的に拒否&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;ステートフルなデフォルトアクション&#10;確立された接続の八ケットをトロップ&#10;すべてのバケットをトロップします。&#10;ロすべてをトロップ&#10;デフォルトのアクション&#10;[トロップ]アクラョンは最六で1つしか選択てきす、[アラ-ト]アクラョンはいすれかまたは両方を択できます。&#10;すべてアラ-ト&#10;確立された接続にあるバケットのみをトロップします。&#10;確立された接続にあるバケットにALERTESTABLISHEDメッセーラをロク記録します。&#10;ロ確立された接続の八ケットをアラ-ト&#10;すべてのバケットてALERTALLメッセーラをロク記録します。&#10;キマンセル&#10;X&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht6A28(1).tmp" width=1616 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;ステートフルなデフォルトアクション&#10;確立された接続の八ケットをトロップ&#10;すべてのバケットをトロップします。&#10;ロすべてをトロップ&#10;デフォルトのアクション&#10;[トロップ]アクラョンは最六で1つしか選択てきす、[アラ-ト]アクラョンはいすれかまたは両方を択できます。&#10;すべてアラ-ト&#10;確立された接続にあるバケットのみをトロップします。&#10;確立された接続にあるバケットにALERTESTABLISHEDメッセーラをロク記録します。&#10;ロ確立された接続の八ケットをアラ-ト&#10;すべてのバケットてALERTALLメッセーラをロク記録します。&#10;キマンセル&#10;X&#13;&#10;プライベート→パブリック　※パッケージのインストールなどを許可&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;ル-ルを編集&#10;プロトコル&#10;検査するトランスホートプロトコル。&#10;TCP&#10;検査する送信元ホートまたはホート箋巨。&#10;送信元&#10;サホートされているホートは0~らてす。&#10;検査する送信先ホートまたはホート箋巨。&#10;X&#10;検査する送信元アドレスとアドレス範目。&#10;10当。第0/24&#10;カスタム&#10;単-のアドレスとロDRプロックを指定てきま&#10;す。&#10;検査する送信先アドレスとアドレス範目。&#10;ANY&#10;単-のアトレスとロDRプロックを指定てきま&#10;す。&#10;送信元ホ-ト&#10;任意のホ-ト&#10;ANY&#10;カスタム&#10;送信先ホ-ト&#10;80&#10;サホートされているホートは0~らてす。&#10;キマンセル&#10;保&#13;&#10;パブリック→プライベート　※ページの公開などを許可&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;ル-ルを編集&#10;プロトコル&#10;検査するトランスホートプロトコル。&#10;TCP&#10;検査する送信元ホートまたはホート箋巨。&#10;サホートされているホートは0~らてす。&#10;検査する送信先ホートまたはホート箋巨。&#10;X&#10;検査する送信元アドレスとアドレス範目。&#10;ANY&#10;単-のアトレスとロDRプロックを指定てきま&#10;す。&#10;検査する送信先アドレスとアドレス範目。&#10;10当。第0/24&#10;カスタム&#10;単-のアトレスとロDRプロックを指定てきま&#10;す。&#10;送信元ホ-ト&#10;任意のホ-ト&#10;ANY&#10;カスタム&#10;送信先ホ-ト&#10;80&#10;キマンセル&#10;サホートされているホートは0~らてす。&#13;&#10;" 
+src="AWS.files/mht6A4A(1).tmp" width=1616 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;ル-ルを編集&#10;プロトコル&#10;検査するトランスホートプロトコル。&#10;TCP&#10;検査する送信元ホートまたはホート箋巨。&#10;サホートされているホートは0~らてす。&#10;検査する送信先ホートまたはホート箋巨。&#10;X&#10;検査する送信元アドレスとアドレス範目。&#10;ANY&#10;単-のアトレスとロDRプロックを指定てきま&#10;す。&#10;検査する送信先アドレスとアドレス範目。&#10;10当。第0/24&#10;カスタム&#10;単-のアトレスとロDRプロックを指定てきま&#10;す。&#10;送信元ホ-ト&#10;任意のホ-ト&#10;ANY&#10;カスタム&#10;送信先ホ-ト&#10;80&#10;キマンセル&#10;サホートされているホートは0~らてす。&#13;&#10;&#13;&#10;プライベート側のEC2インスタンスに対するセキュリティグループ&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;インバウントル-ル(2)&#10;0&#10;インハウンドのル-ルを編集&#10;タクを管埋&#10;0&#10;Qセキュリティクル-プのル-ルをフィルタリンク&#10;E&#10;ロロロ&#10;ホート範囲&#10;22&#10;0-655当5&#10;プロトコル&#10;TCP&#10;TCP&#10;タイプ&#10;SSH&#10;すべてのTCP&#10;Ⅲバー&#10;ゞ/ヨ:ノ&#10;セキュリティクルー&#10;「-0b28797294024氤.&#10;「-029242868ヨ2[1204e&#10;説明&#10;10。0℃/16&#10;1030℃/16&#13;&#10;&#13;&#10;" 
+src="AWS.files/mht6A6C(1).tmp" width=1616 
+height=817><BR></NOBR></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.244in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.142in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">WAF</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">16:58</P></DIV>
+<DIV 
+style="WIDTH: 11.244in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN lang=en-US>Web 
+Application Firewall</SPAN><SPAN lang=ja>を提供するサービス</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6A8E(1).tmp" width=824 
+height=542></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6AC0(1).tmp" width=826 
+height=386></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6AE2(1).tmp" width=843 
+height=383></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>例）</SPAN><SPAN lang=en-US>SQL</SPAN><SPAN 
+lang=ja>インジェクション攻撃対策</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6B05(1).tmp" width=857 
+height=186></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>※デフォルトの許可設定を</SPAN><SPAN lang=en-US>Allow</SPAN><SPAN 
+lang=ja>にしておかないとすべて拒否になってしまう</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6B37(1).tmp" width=830 
+height=367></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>API</SPAN><SPAN lang=ja>に適応する場合</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6B59(1).tmp" width=996 
+height=537></P>
+<P lang=en-US 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>ALB</SPAN><SPAN lang=ja>の場合</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6B7B(1).tmp" width=1075 
+height=324></P>
+<P lang=en-US 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=en-US>CloudFront</SPAN><SPAN lang=ja>の場合</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6B9D(1).tmp" width=614 
+height=468></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN lang=ja 
+style="FONT-FAMILY: 游ゴシック">特定のアドレスから許可</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>or</SPAN><SPAN lang=ja 
+style='FONT-FAMILY: "Yu Gothic"'>拒否</SPAN><SPAN lang=en-US 
+style='FONT-FAMILY: "Yu Gothic"'>ver</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6BCF(1).tmp" width=618 
+height=555></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6BF1(1).tmp" width=1044 
+height=321></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6C14(1).tmp" width=632 
+height=357></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6C36(1).tmp" width=614 
+height=430></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.917in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.918in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">GuardDuty</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">18:13</P></DIV>
+<DIV 
+style="WIDTH: 10.917in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">アカウントとワークロードを継続的にモニタリングするサービス</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">悪意のあるアクティビティがないかを確認しする（ウイルスなど）</P>
+<P style="MARGIN: 0in"><IMG src="AWS.files/mht6C68(1).tmp" width=1044 
+height=405></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 6.556in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 3.034in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">セキュリティまとめ</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月5日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">17:19</P></DIV>
+<DIV 
+style="WIDTH: 6.556in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">・セキュリティグループ</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">用途）インスタンス等、個々の通信制限</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">注意）特定の送信元からの通信を遮断できない</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.75in">→ルールは許可する通信しか指定できない</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>・ネットワーク</SPAN><SPAN lang=en-US>ACL</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">用途）サブネットレベル（複数インスタンス）への通信制限</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">注意）ステートレスの為、戻りパケットの許可が必要</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>Network Firewall</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in">用途）複数のサブネットに対して、一元的に通信を制限</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.75in">特定のプロトコル（ポートに頼らない）やドメインに対して制限が可能</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=ja>注意）通信経路（往復分）に</SPAN><SPAN lang=en-US>Firewall</SPAN><SPAN 
+lang=ja>を経由させるようにルート登録が必要</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.75in">ステートレス→ステートフルでルールを評価する</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in"><SPAN 
+lang=ja>・</SPAN><SPAN lang=en-US>WAF</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=ja>用途）</SPAN><SPAN lang=en-US>Web</SPAN><SPAN 
+lang=ja>アプリケーションを保護</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.75in"><SPAN 
+lang=en-US>SQL</SPAN><SPAN lang=ja>インジェクションや</SPAN><SPAN 
+lang=en-US>DOS</SPAN><SPAN lang=ja>攻撃に対して</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+lang=ja>注意）適用できるのは、</SPAN><SPAN lang=en-US>ALB</SPAN><SPAN lang=ja>・</SPAN><SPAN 
+lang=en-US>CloudFront</SPAN><SPAN lang=ja>・</SPAN><SPAN lang=en-US>API 
+Gateway</SPAN><SPAN lang=ja>のみ（学習済みなのは）</SPAN></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 10.661in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.491in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.057in">
+<P lang=en-US 
+style="FONT-SIZE: 20pt; FONT-FAMILY: 游ゴシック; MARGIN: 0in">Backup</P></DIV>
+<DIV 
+style="WIDTH: 1.668in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0.057in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">2023年9月6日</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 游ゴシック; COLOR: #767676; MARGIN: 0in">14:24</P></DIV>
+<DIV 
+style="WIDTH: 10.661in; MARGIN-TOP: 0.495in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="バックアップ作成手順&#13;&#10;バックアップボールト（保管庫）を作成する&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSBackuQ>バックアップホ-ルト&#10;バックアップホ-ルト(6)情報&#10;バックアップホ-ルトは、バックアップが保存されるコンテナてす。バックアップを保存てきるテフォルトのホ-ルトとして、1つまたは数のホ-丿しトを持っことができます。&#10;バックアップ保管庫の作成&#10;Qホ-ルト名またはホ-ルトロックのステ-タスで検索&#10;toro-backup-vault&#10;b3-vauに&#10;b2-vauに&#10;bl-vauに&#10;Default&#10;aws/efs/automatic-backup-vault&#10;バックアップホ-ルト名&#10;フィルタ-タク値&#10;タク値を這加,&#10;0&#10;0&#10;0&#10;復旧ホイント&#10;0&#10;ホ-ルトロックのステ-タス&#10;フィルタ-タクキ-&#10;任言のタク…,&#10;マ&#10;a&#10;ロック済み-カ八ナンスモ-ト&#10;KMS階号化キー&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#10;当498e2ヨ9-8826-4f72-25当5-4b77当5618[9弖匕&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSBackup>△ックッフホ=ル止>バックアップ保管庫の作成&#10;バックアップ保管庫の作成&#10;八ックアップホ-ルト名&#10;信bvauに&#10;バックアップホ-ルト名ては文字と小文字が区別されます。2~文字の英数字または「-・」を言める必要があります。&#10;暄号化キ-情報&#10;(MSキ-を選択してください&#10;バックアップホ-ルトタグ-オプション&#10;ここて指定されたタクは、バックアップホ-ルトを整理して跡するのに役立ちます&#10;この保管産にはタクが関連付けられていません。&#10;新しいタクを追加&#10;50個のタクをさらに直亜できます。&#10;キマンセル&#10;保管庫の作&#13;&#10;&#13;&#10;例）EC2&#13;&#10;バックアッププランの作成&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWSBackup>△ックZッユプラン>バックアッププランを作成&#10;バックアッププランを作成&#10;起動オプション&#10;八ックアッププランのオプション&#10;〇テンプレ-トて背始する&#10;AWSBackupから提供されたテン&#10;プレ-トに基づいてバックアップ&#10;プランを作成します。&#10;八ックアッププラン名&#10;b壟pに&#10;情報&#10;0新しいプランを立てる&#10;新しいバックアッププランを最初&#10;から設定します。&#10;〇」50Nを使用してプランを定&#10;既存のバックアッププランの&#10;」50N式を変霆、または新しい式&#10;を作成します。&#10;バックアッププラ)名ては文字と小文字が区別されます。1~文字の英数字または「・」を言める必要があります。&#10;バックアッププランに追加されたタク-オプション&#13;&#10;" 
+src="AWS.files/mht6C8A(1).tmp" width=1535 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;AWSBackup>△ックZッユプラン>バックアッププランを作成&#10;バックアッププランを作成&#10;起動オプション&#10;八ックアッププランのオプション&#10;〇テンプレ-トて背始する&#10;AWSBackupから提供されたテン&#10;プレ-トに基づいてバックアップ&#10;プランを作成します。&#10;八ックアッププラン名&#10;b壟pに&#10;情報&#10;0新しいプランを立てる&#10;新しいバックアッププランを最初&#10;から設定します。&#10;〇」50Nを使用してプランを定&#10;既存のバックアッププランの&#10;」50N式を変霆、または新しい式&#10;を作成します。&#10;バックアッププラ)名ては文字と小文字が区別されます。1~文字の英数字または「・」を言める必要があります。&#10;バックアッププランに追加されたタク-オプション&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;バックアップル-ルの設定情報&#10;バックアップル-ル名&#10;b当ィu厄&#10;バックアップル-ル名ては文字と小文字が区別されます。&#10;バックアップホ-ルト情報&#10;~文字の英数字または「--」を言める必要があります。&#10;b当-vauに&#10;バックアップ第&#10;0&#10;新しいバックアップホ-ルトを作成匕&#10;情報&#10;継続的パックアップ情報&#10;トされているリソ-スを復元てきます。R05るおよびSAPHANAonAmazonEこ2リソ-スて使用てきます。&#10;継続的なバックアップては、選択した特定の時第(1秒単位て指定てき、最驕前までⅡこ巻き戻すことによって、AWS改凵pでサホ-&#10;ロホイントインタイムリカバリ(PITR)のために継続的なバックアップを有効化&#10;指定した持誾にバックアッププランが始されない場合は、バックアッププランを始する期誾を指定します。&#10;内から始める情報&#10;01:00Asia/Tokyo(UT〔+09:00)&#10;背始背&#10;バックアップ期問情報&#10;バックアップを始する時第を指定します。該当する場合、時第は持誾に合わせて調整され、1年を通して同じ現地持問が維持されます。&#10;8洋間&#10;次の背以内に完了&#10;情報&#13;&#10;リソースの割り当て&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;AWS日ョ[kuQ>=ツこク」ププラ:ン>lab3-backLlQplan1>&#10;リソ-スの割り当て&#10;リソ-ス副0当て名&#10;b3&#10;リソ-スの割り当て&#10;リソ-スり当て名ては文字と小文字が区別されます。1~文字の英数字または「--」を言める必要があります。&#10;IAMロール情報&#10;AWSBackupは、ユ-ザ-にイ哲)って復旧ホイントを作成および盲理するときにこのIAMロー丿レを引き受けます。&#10;0デフォルトのロ-ル&#10;AVISBackupのテフォルトのロ-ルが存在しない場合は、正しい許可を持つロ-ルが作成されます。&#10;〇IAMロールを選択してください&#13;&#10;インク描画&#13;&#10;" 
+src="AWS.files/mht6CBC(1).tmp" width=1535 height=1440><BR><IMG 
+alt="無題の画像.png 自動生成された代替テキスト: &#10;AWS日ョ[kuQ>=ツこク」ププラ:ン>lab3-backLlQplan1>&#10;リソ-スの割り当て&#10;リソ-ス副0当て名&#10;b3&#10;リソ-スの割り当て&#10;リソ-スり当て名ては文字と小文字が区別されます。1~文字の英数字または「--」を言める必要があります。&#10;IAMロール情報&#10;AWSBackupは、ユ-ザ-にイ哲)って復旧ホイントを作成および盲理するときにこのIAMロー丿レを引き受けます。&#10;0デフォルトのロ-ル&#10;AVISBackupのテフォルトのロ-ルが存在しない場合は、正しい許可を持つロ-ルが作成されます。&#10;〇IAMロールを選択してください&#13;&#10;&#13;&#10;無題の画像.png 自動生成された代替テキスト: &#10;リソ-スの選択情報&#10;タクとリソ-スを使用して、このバックアッププランにリソ-スをり当てます。&#10;1.リソ-ス選択を定義情報&#10;このバックアップ計直て保する特定のリソ-スタイプを選択します。特定のリソ-スを選択から外することもてきます。&#10;2.特定のリソ-スタイプを選択情報&#10;タイプ別にリソ-スを選択するか、て別のリソ-スを指定します。&#10;0特定のリソ-スタイプを含める&#10;アカウントて有効になっているすべてのリソ-スタイプを保襄します。&#10;〇すべてのリソ-スタイプを含める&#10;すべてのリソ-スを保するか、タイプまたはてリソ-スを指定します。&#10;リソ-スタイプを選択&#10;リソ-スタイプ&#10;工2&#10;イン-スタンス&#10;リソ-スを選択&#10;i-025[計b信e91d0567X&#10;削除&#10;選択したリソ-スタイプから特定のリソ-ス旧を除外する一オプション情報&#10;このり当てから外する特定のリソ-スを選択します。&#10;リソ-スタイプを選択&#10;4.タグを使用して選択を絞り込む一オプション情報&#10;タクを追加&#10;リソ-ス選択を絞り込むタクが選択されていません。&#10;当てられます。&#10;タクてリソ-スをフィルタリンクします。タクが複数ある場合、リソ-スはすべてのタク件を港たす場合にのみバックアッププランにり&#13;&#10;&#13;&#10;※EC2はAMIでEBSはスナップショットでバックアップがとられる&#13;&#10;※EFSは設定項目に自動バックアップがあるが、それはAWS Backupを使用している　→　追加料金がかかる&#13;&#10;" 
+src="AWS.files/mht6CDE(1).tmp" width=1535 
+height=1231><BR></NOBR></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">OneNote 
+で作成されました。</P></DIV></BODY></HTML>
